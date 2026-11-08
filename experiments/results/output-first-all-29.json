@@ -1,0 +1,38 @@
+{
+  "status": "budget_exhausted",
+  "repeat_prefix_index": 93,
+  "region": "all",
+  "fixtures": [
+    [
+      43,
+      19,
+      37
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      53,
+      31,
+      29
+    ],
+    [
+      59,
+      41,
+      37
+    ]
+  ],
+  "stats": {
+    "prefixes": 65,
+    "first_core_objects": 14447,
+    "second_core_candidates": 403965,
+    "locus_programs": 46,
+    "tail_first_objects": 36877,
+    "tail_finishers": 0,
+    "mismatched_root_counts": 31641
+  },
+  "elapsed": 40.00029562100008,
+  "scope": "3 input circles; <=2 draws first center; target circle drawn early; 2-draw target tail; floating screening only"
+}

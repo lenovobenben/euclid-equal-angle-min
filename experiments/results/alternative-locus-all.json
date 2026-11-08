@@ -1,0 +1,44 @@
+{
+  "status": "budget_exhausted",
+  "region": "all",
+  "repeat_prefix_index": 53,
+  "fixtures": [
+    [
+      43,
+      19,
+      37
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      53,
+      31,
+      29
+    ],
+    [
+      59,
+      41,
+      37
+    ]
+  ],
+  "stats": {
+    "prefixes": 54,
+    "fourth_objects": 5253,
+    "fifth_witness_objects": 80,
+    "noncanonical_loci": 0,
+    "tail_objects": 0,
+    "mismatched_root_counts": 892,
+    "virtual_mismatched_roots": 72182
+  },
+  "elapsed": 40.000023800000235,
+  "locus_examples": [],
+  "scope": "specified virtual witness shapes only, finite multi-fixture floats, no lower-bound claim",
+  "positive_control": {
+    "known_M_witness": true,
+    "known_KG_candidate_retained": true,
+    "oracle_not_injected": true
+  }
+}

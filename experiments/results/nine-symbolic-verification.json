@@ -1,0 +1,6 @@
+{
+  "sage_version": "10.7",
+  "status": "passed",
+  "identities": 14,
+  "scope": "general identities modulo h^2=4a^2-b^2; see NINE.md for branch and positivity proof"
+}

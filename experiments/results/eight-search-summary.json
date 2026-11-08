@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-09",
+  "generic_upper_unchanged": 9,
+  "general_eight_found": false,
+  "no_lower_bound_claim": true,
+  "unoriented_first_locus_fragments": [
+    {
+      "report": "eight-first-locus-screen.json",
+      "status": "budget_exhausted",
+      "start_index": 0,
+      "first_objects": 86,
+      "second_objects": 57361,
+      "root_count_mismatches": 75181
+    },
+    {
+      "report": "eight-first-locus-screen-117.json",
+      "status": "budget_exhausted",
+      "start_index": 117,
+      "first_objects": 102,
+      "second_objects": 62569,
+      "root_count_mismatches": 82747
+    },
+    {
+      "report": "eight-first-locus-screen-232.json",
+      "status": "budget_exhausted",
+      "start_index": 232,
+      "first_objects": 90,
+      "second_objects": 58870,
+      "root_count_mismatches": 79764
+    },
+    {
+      "report": "eight-first-locus-screen-342.json",
+      "status": "screen_completed_without_hit",
+      "start_index": 342,
+      "first_objects": 56,
+      "second_objects": 33362,
+      "root_count_mismatches": 46649
+    }
+  ],
+  "observed_second_objects": 212162.0,
+  "scope": "bounded floating screens; first-step restarts overlap; skipped mismatched root counts; conditional exact results separate"
+}

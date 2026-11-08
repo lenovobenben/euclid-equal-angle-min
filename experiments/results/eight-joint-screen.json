@@ -1,0 +1,36 @@
+{
+  "status": "screen_completed_without_hit",
+  "repeat_prefix_index": 220,
+  "stats": {
+    "prefixes": 220,
+    "first_objects": 19684,
+    "second_finishers": 186,
+    "third_finishers": 0,
+    "mismatched_root_counts": 7412
+  },
+  "elapsed": 11.117952621999393,
+  "fixtures": [
+    [
+      37,
+      19,
+      43
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      29,
+      31,
+      53
+    ],
+    [
+      53,
+      31,
+      29
+    ]
+  ],
+  "start_prefix": 0,
+  "scope": "3 input circles plus 3 sequential joint-center objects; floating heuristic only"
+}

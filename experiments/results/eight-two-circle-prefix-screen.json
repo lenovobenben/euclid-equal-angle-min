@@ -1,0 +1,36 @@
+{
+  "status": "screen_completed_without_hit",
+  "stats": {
+    "prefixes": 68,
+    "first_core_objects": 8498,
+    "second_core_candidates": 220712,
+    "center_programs": 16,
+    "mismatched_root_counts": 2751
+  },
+  "elapsed": 4.16159955600051,
+  "all_initial_circle_prefixes_requested": true,
+  "fixtures": [
+    [
+      37,
+      19,
+      43
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      29,
+      31,
+      53
+    ],
+    [
+      53,
+      31,
+      29
+    ]
+  ],
+  "prefix_size": 2,
+  "scope": "2 input-centered circles; <=2 objects per center, sequential; floating prefilter only"
+}

@@ -1,0 +1,13 @@
+{
+  "sage_version": "10.7",
+  "status": "completed",
+  "stats": {
+    "seed_pairs": 192,
+    "third_circles": 720,
+    "fourth_circles": 8448,
+    "discriminants": 21120
+  },
+  "hits": [],
+  "positive_control": "known GammaM/GammaN discriminant has odd Delta factor",
+  "scope": "restricted four-circle shape; exact polynomial divisibility; no global lower bound"
+}

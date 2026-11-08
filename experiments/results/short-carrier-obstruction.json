@@ -1,0 +1,15 @@
+{
+  "sage_version": "10.7",
+  "status": "passed",
+  "stats": {
+    "seed_pairs": 192,
+    "generic_tangencies": 72,
+    "field_tests": 3600,
+    "center_residue_tests": 1680,
+    "k_unit_tests": 840
+  },
+  "odd_delta_field_hits": [],
+  "center_residue_hits": [],
+  "positive_controls": "Delta, Delta^3, 1/Delta and target y^2 odd; Delta^2 and 1/Delta^2 even",
+  "scope": "finite symbolic part of the generic >=6 E proof; exhaustiveness, local-ring and carrier arguments in docs/LOWER_BOUND.md"
+}

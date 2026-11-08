@@ -1,0 +1,77 @@
+{
+  "status": "candidate",
+  "first_index": 47,
+  "program": [
+    [
+      "circle",
+      "C",
+      "B"
+    ],
+    [
+      "line",
+      "s1&GammaB:0",
+      "s1&GammaB:1"
+    ]
+  ],
+  "target_sides": [
+    "upper",
+    "lower"
+  ],
+  "stats": {
+    "first_objects": 34,
+    "second_objects": 0,
+    "finishers": 0,
+    "mismatched_root_counts": 1
+  },
+  "elapsed": 0.02144140200016409,
+  "fixtures": [
+    [
+      37,
+      19,
+      43
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      29,
+      31,
+      53
+    ],
+    [
+      53,
+      31,
+      29
+    ]
+  ],
+  "first_mode": "all",
+  "start_index": 0,
+  "family": "equal-outer",
+  "tail_budget": 2,
+  "oriented": false,
+  "normalized_lengths": [
+    [
+      1.9473684210526316,
+      1.0,
+      1.9473684210526316
+    ],
+    [
+      1.7826086956521738,
+      1.0,
+      1.7826086956521738
+    ],
+    [
+      1.7096774193548387,
+      1.0,
+      1.7096774193548387
+    ],
+    [
+      1.7058823529411764,
+      1.0,
+      1.7058823529411764
+    ]
+  ],
+  "scope": "5E first-locus prefix plus bounded tail; floating prefilter; family changes fixture ratios as documented"
+}

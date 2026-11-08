@@ -12,7 +12,7 @@
 
 原创 Markdown 文档、数学说明、构造与证明记录、研究数据、几何导出、分镜和动画成品采用 [CC BY 4.0](LICENSE-CONTENT)。生成这些材料的代码仍按软件范围处理。
 
-署名建议：lenovobenben，Euclid-Equal-Angle-Min；引用时注明版本，改编时注明修改。本项目当前为本地仓库，尚无发布地址。
+署名建议：lenovobenben，Euclid-Equal-Angle-Min；引用时注明版本，改编时注明修改。项目地址：[github.com/lenovobenben/euclid-equal-angle-min](https://github.com/lenovobenben/euclid-equal-angle-min)。
 
 ## 来源材料
 

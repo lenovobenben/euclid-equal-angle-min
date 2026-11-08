@@ -1,0 +1,12 @@
+{
+  "sage_version": "10.7",
+  "status": "completed",
+  "stats": {
+    "seed_pairs": 192,
+    "third_circles": 720,
+    "tests": 2880,
+    "generic_tangencies_skipped": 72
+  },
+  "hits": [],
+  "scope": "two axis-centered seed circles plus circle centered at G; divisibility by Delta only; no lower bound"
+}

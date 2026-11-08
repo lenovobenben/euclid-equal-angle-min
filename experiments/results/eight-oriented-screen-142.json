@@ -1,0 +1,61 @@
+{
+  "status": "budget_exhausted",
+  "repeat_first_index": 259,
+  "stats": {
+    "first_objects": 106,
+    "second_objects": 61648,
+    "finishers": 0,
+    "mismatched_root_counts": 31029
+  },
+  "elapsed": 40.00027378499999,
+  "fixtures": [
+    [
+      43,
+      19,
+      37
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      53,
+      31,
+      29
+    ],
+    [
+      59,
+      41,
+      37
+    ]
+  ],
+  "first_mode": "all",
+  "start_index": 142,
+  "family": "generic",
+  "tail_budget": 3,
+  "oriented": true,
+  "normalized_lengths": [
+    [
+      2.263157894736842,
+      1.0,
+      1.9473684210526316
+    ],
+    [
+      1.7826086956521738,
+      1.0,
+      1.3478260869565217
+    ],
+    [
+      1.7096774193548387,
+      1.0,
+      0.9354838709677419
+    ],
+    [
+      1.4390243902439024,
+      1.0,
+      0.9024390243902439
+    ]
+  ],
+  "scope": "5E first-locus prefix plus bounded tail; floating prefilter; family changes fixture ratios as documented"
+}

@@ -1,0 +1,6 @@
+{
+  "sage_version": "10.7",
+  "status": "passed",
+  "identities": 20,
+  "scope": "rational identities and mirrored-secant inversion; special denominators require branches; no new E upper bound"
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" role="img" aria-labelledby="title desc">
+  <title id="title">Four collinear points with equal viewing angles</title>
+  <desc id="desc">AB equals 3, BC equals 1, CD equals 2. The upper point P and lower point P prime are mirror solutions. The three adjacent angles at P are each 45 degrees.</desc>
+  <rect width="760" height="450" rx="16" fill="#f8fafc"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="380" y="35" text-anchor="middle" font-size="18" fill="#334155">AB : BC : CD = 3 : 1 : 2</text>
+    <g fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.65">
+      <path d="M80 260L440 380L380 260M480 260L440 380L680 260"/>
+      <path d="M440 140V380"/>
+    </g>
+    <path d="M40 260H720" stroke="#334155" stroke-width="2"/>
+    <path d="M80 260L440 140L380 260M480 260L440 140L680 260" fill="none" stroke="#2563eb" stroke-width="2"/>
+    <path d="M468.622 154.311A32 32 0 0 1 450.119 170.358A32 32 0 0 1 425.689 168.622A32 32 0 0 1 409.642 150.119" fill="none" stroke="#0f766e" stroke-width="2"/>
+    <g fill="#0f766e" font-size="17" text-anchor="middle">
+      <text x="474" y="183">θ</text>
+      <text x="436" y="199">θ</text>
+      <text x="397" y="182">θ</text>
+    </g>
+    <g fill="#0f172a">
+      <circle cx="80" cy="260" r="4"/><circle cx="380" cy="260" r="4"/>
+      <circle cx="480" cy="260" r="4"/><circle cx="680" cy="260" r="4"/>
+    </g>
+    <g fill="#0f172a" font-size="20" text-anchor="middle">
+      <text x="80" y="247">A</text><text x="380" y="247">B</text>
+      <text x="480" y="247">C</text><text x="680" y="247">D</text>
+    </g>
+    <g fill="#475569" font-size="17" text-anchor="middle">
+      <text x="230" y="284">3</text><text x="430" y="284">1</text><text x="580" y="284">2</text>
+    </g>
+    <circle cx="440" cy="140" r="5" fill="#2563eb"/>
+    <text x="451" y="126" font-size="21" fill="#1d4ed8">P</text>
+    <text x="440" y="98" text-anchor="middle" font-size="17" fill="#0f766e">θ = 45°</text>
+    <circle cx="440" cy="380" r="5" fill="#64748b"/>
+    <text x="453" y="400" font-size="21" fill="#475569">P′</text>
+  </g>
+</svg>

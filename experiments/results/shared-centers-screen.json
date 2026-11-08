@@ -1,0 +1,34 @@
+{
+  "status": "screen_completed_without_hit",
+  "stats": {
+    "first_candidates": 225,
+    "second_finishers": 16,
+    "third_candidates": 13626,
+    "mismatched_root_counts": 122
+  },
+  "base_points": 14,
+  "elapsed": 0.8899999999998727,
+  "fixtures": [
+    [
+      37,
+      19,
+      43
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      29,
+      31,
+      53
+    ],
+    [
+      53,
+      31,
+      29
+    ]
+  ],
+  "scope": "four-circle prefix; arbitrary first object, second center carrier, third other-center carrier; floating prefilter only"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "budget_exhausted",
+  "repeat_first_index": 342,
+  "stats": {
+    "first_objects": 90,
+    "second_objects": 58870,
+    "finishers": 0,
+    "mismatched_root_counts": 79764
+  },
+  "elapsed": 40.00055715000053,
+  "fixtures": [
+    [
+      37,
+      19,
+      43
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      29,
+      31,
+      53
+    ],
+    [
+      53,
+      31,
+      29
+    ]
+  ],
+  "first_mode": "all",
+  "start_index": 232,
+  "scope": "5E first-locus prefix plus auxiliary, auxiliary, target carrier; floating prefilter"
+}

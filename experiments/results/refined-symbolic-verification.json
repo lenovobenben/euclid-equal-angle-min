@@ -1,0 +1,6 @@
+{
+  "sage_version": "10.7",
+  "identities": 10,
+  "status": "passed",
+  "scope": "general rational identities; positivity, branch coverage and 2E lower bound in REFINEMENTS.md"
+}

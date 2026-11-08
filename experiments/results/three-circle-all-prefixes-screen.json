@@ -1,0 +1,76 @@
+{
+  "status": "candidate",
+  "prefix": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "C",
+      "D"
+    ]
+  ],
+  "center_order": [
+    "M",
+    "N"
+  ],
+  "core": [
+    [
+      "line",
+      "c1&l:0",
+      "c1&c0:0"
+    ],
+    [
+      "line",
+      "c1&c0:1",
+      "u1&c0:0"
+    ]
+  ],
+  "tail": [
+    [
+      "line",
+      "C",
+      "u2&c1:1"
+    ],
+    [
+      "line",
+      "c1&c0:1",
+      "v1&c2:0"
+    ]
+  ],
+  "stats": {
+    "prefixes": 34,
+    "first_core_objects": 31961,
+    "second_core_candidates": 1293874,
+    "center_programs": 63,
+    "mismatched_root_counts": 22771
+  },
+  "elapsed": 23.247989271999813,
+  "fixtures": [
+    [
+      37,
+      19,
+      43
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      29,
+      31,
+      53
+    ],
+    [
+      53,
+      31,
+      29
+    ]
+  ],
+  "scope": "3 input-centered circles; <=2 objects per center, sequential; floating prefilter only"
+}

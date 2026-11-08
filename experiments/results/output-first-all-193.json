@@ -1,0 +1,38 @@
+{
+  "status": "screen_completed_without_hit",
+  "repeat_prefix_index": 220,
+  "region": "all",
+  "fixtures": [
+    [
+      43,
+      19,
+      37
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      53,
+      31,
+      29
+    ],
+    [
+      59,
+      41,
+      37
+    ]
+  ],
+  "stats": {
+    "prefixes": 27,
+    "first_core_objects": 4056,
+    "second_core_candidates": 113302,
+    "locus_programs": 30,
+    "tail_first_objects": 30462,
+    "tail_finishers": 0,
+    "mismatched_root_counts": 43722
+  },
+  "elapsed": 29.009491922000052,
+  "scope": "3 input circles; <=2 draws first center; target circle drawn early; 2-draw target tail; floating screening only"
+}

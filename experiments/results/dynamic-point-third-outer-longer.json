@@ -1,0 +1,33 @@
+{
+  "status": "screen_completed_without_hit",
+  "mode": "point-third",
+  "region": "outer-longer",
+  "fixtures": [
+    [
+      43,
+      19,
+      37
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      71,
+      37,
+      43
+    ]
+  ],
+  "stats": {
+    "prefixes": 217,
+    "first_core_objects": 0,
+    "second_core_candidates": 0,
+    "first_center_programs": 0,
+    "joint_first_objects": 31703,
+    "joint_second_finishers": 1433,
+    "mismatched_root_counts": 4446
+  },
+  "elapsed": 18.83040800500021,
+  "scope": "adaptive circle prefixes and declared center order; float screening, skipped mismatched branches; no lower bound"
+}

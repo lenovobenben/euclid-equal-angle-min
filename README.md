@@ -1,88 +1,128 @@
-# Euclid-Equal-Angle-Min · 共线四点等视角的最短尺规构造
+# Euclid-Equal-Angle-Min
 
-**简体中文** · [English](README.en.md)
+**共线四点等视角的最短尺规构造** · [English](README.en.md)
 
-给定一条直线上依次排列的四个不同点 A、B、C、D，研究直线外满足
+给定一条直线上依次排列的四点 A、B、C、D，在指定一侧作点 P，使
 
 $$
-\angle APB=\angle BPC=\angle CPD
+\angle APB=\angle BPC=\angle CPD.
 $$
 
-的点 P 何时存在，以及构造它们所需的最少尺规步骤。
+本项目研究两个问题：**什么时候有解？在所有有解输入上，最少需要多少次画线、画圆？** 同时区分构造一个解与构造全部两个镜像解。
 
-本项目是 lenovobenben 的**尺规作图优化系列第三个项目**。目录结构、E 步计数和验证标准参照 Euclid-CCC-Min；各项目分别定义输入与目标，步数按各自规则配置比较。
+![共线四点等视角示意：间距为 3、1、2 时，P 与 P′ 关于底线对称，三个角均为 45°](docs/assets/equal-angle.svg)
 
-| 项目 | 研究题目 | 本地目录 |
-|---|---|---|
-| Euclid-Min | 正十七边形 | `../euclid-min/` |
-| Euclid-CCC-Min | 阿波罗尼乌斯三圆相切问题 | `../euclid-ccc-min/` |
-| Euclid-Equal-Angle-Min | 共线四点的三个相等视角 | 本项目 |
+图为 AB=3、BC=1、CD=2 的实例；两个解关于输入直线对称。示意图不计入构造步骤。
 
-## 当前状态
+## 当前结果
 
-2026-11-09 已完成存在条件、两解唯一性及原作图的一般参数证明，并用 Docker 中的 SageMath 10.7 精确重放。**原作图在其明确受限域上给出单解与双解均为 10 E 的已验证上界；尚无整个有解域的构造上界或最小性结论。**
+设 AB=a、BC=b、CD=c，其中 a,b,c>0。**有解的充要条件**是
 
-原作图的精确适用域为：在 `3ac>b(a+b+c)` 的基础上，还需 `b<2a`、`b<2c`、`a≠b`、`b≠c`。其完整程序为 **4 线 + 6 圆 = 10 E**。限制来自辅助圆不相交/相切，以及定心线平行底线，见 [BASELINE](docs/BASELINE.md)。
+$$
+\Delta=3ac-b(a+b+c)>0,
+$$
 
-## 两问与研究目标
+等价于 $(a+b)(b+c)<4ac$。有解时，每侧恰有一个解。
 
-1. **存在性**：设 AB=a、BC=b、CD=c，已证明充要条件为 `3ac > b(a+b+c)`；有解时恰有两个镜像解。公共角满足 `b(a+b+c)/(ac) = 3−4sin²θ`。临界退化分为有限合并点和无穷远两类，见 [EXISTENCE](docs/EXISTENCE.md)。
-2. **最短作图**：在有解输入上，分别研究构造指定一侧的一个解与构造全部解的最少 E 步。原作图以 X、X′ 命名输出，本项目统一记作 P、P′。
+截至 **2026-11-09**：
 
-两问完整表述见 [PROBLEMS](docs/PROBLEMS.md)，原作图展开见 [BASELINE](docs/BASELINE.md)。
+| 结果 | 范围与证据 |
+|---|---|
+| **9 E 通用上界** | 覆盖全部有解输入，同时得到两个解；一般分支为 4 线 + 5 圆。[步骤与覆盖证明](docs/NINE.md) |
+| **6 E 一般下界** | 通过完整短程序分类及精确符号枚举，排除至多五笔的一般构造。[计算机辅助证明](docs/LOWER_BOUND.md) |
+| 10 E 历史基线 | 原作图经精确重放验证，但需要额外长度条件。[原作图审计](docs/BASELINE.md) |
+| 7 E / 2 E 特殊族 | 部分等长条件有七笔作法；两个明确乘积条件族恰好只需两笔。[条件与证明](docs/REFINEMENTS.md) |
 
-## E 步计数
+**一般最优值与全域最坏最优值，目前都在 6–9 E 之间。下一目标是覆盖全部有解输入的 8 E 构造。** 尚未证明九笔最短；六笔下界不适用于每个特殊比例输入。
+
+研究优先考虑所有分支与最坏成本。存在条件不满足时无解；某种辅助作图的比例条件不满足时，需要调整构造，不能据此缩小题目的有解域。
+
+## 一步怎样计数
+
+免费输入为四个点及它们所在的完整直线。采用无刻度直尺与塌圆规：
 
 | 操作 | 成本 |
 |---|---:|
-| 经过两个已有不同点画完整直线 | 1 E |
-| 以一个已有点为圆心、经过另一个已有点画圆 | 1 E |
-| 获得已有对象的有限实交点 | 0 E |
-| 给定的四点和直线 l | 0 E |
+| 经过两个已有不同点画一条完整直线 | 1 E |
+| 以已有点为圆心、经过另一已有点画圆 | 1 E |
+| 取得已有线、圆的全部有限实交点 | 0 E |
 
-采用无刻度直尺与塌圆规。新点来自已有线、圆的有限实交点；不任取点，不免费搬运距离。中点、垂线、平行线等宏须展开。实际重复绘制仍计费，所有有限实交点自动可用。
+不任取辅助点，不免费搬运半径。中点、垂线、平行线等操作都要展开计费。重复落笔、分支判断新增的对象和失败尝试也计入成本。
 
-先区分指定一侧单解 `EA-ONE` 与全部解 `EA-ALL`，再分别记录一般位置 `gen` 和完整有解域 `rob`。输入直线 l 已给出；只有四点、未给直线的变体须另立规则配置。详见 [DESIGN](docs/DESIGN.md)。
+分别记录指定半平面的单解目标 `EA-ONE` 与全部解目标 `EA-ALL`，以及一般位置 `gen` 和全部有解域 `rob`。完整定义见 [研究设计与计分模型](docs/DESIGN.md)。
 
-## 项目结构
+## 九笔构造的关键
 
-```text
-docs/                 题目、模型、基线、来源与研究记录
-sources/              两篇原始问答快照与来源清单
-experiments/          未来的 replay_ / verify_ / search_ / audit_ 脚本
-experiments/results/  未来的重放与搜索结果
-tests/                未来的精确验证回归测试
-animations/           未来的几何导出、分镜和动画
+原作图用四只起始辅助圆分别求两条等角轨迹的圆心。新作法复用左侧割线与已有圆的第二交点 T，免费获得一个平行方向，从而省去右侧的一只辅助圆。
+
+必要时反向标号，使较长外段位于左侧。存在条件保证左侧模块合法；右侧通过已证明的分支处理相等间距，最终覆盖全部有解输入。完整九笔动作表、分支和证明见 [NINE](docs/NINE.md)。
+
+另有 [反演、第三条轨迹与射影固定点分析](docs/PROJECTIVITY.md)，作为继续省步的研究入口。
+
+## 复现验证
+
+需要 **Git、Docker 和 PowerShell 7**。精确验证使用容器内的 SageMath；当前报告在 SageMath **10.7** 上生成，数值筛查使用 NumPy。
+
+```powershell
+git clone https://github.com/lenovobenben/euclid-equal-angle-min.git
+cd euclid-equal-angle-min
+
+# 如果已经有名为 sage 的运行中容器，跳过这一行。
+docker run -d --name sage sagemath/sagemath:latest sleep infinity
+
+# 九笔通用构造：符号恒等式、精确交点重放与回归测试。
+pwsh -NoProfile -File experiments/verify-nine.ps1
+
+# 七笔 / 两笔条件族及全部 19 项回归测试。
+pwsh -NoProfile -File experiments/verify-refined.ps1
+
+# 六笔一般下界的有限精确符号检查。
+pwsh -NoProfile -File experiments/verify-lower-bound.ps1
 ```
+
+验证脚本会复制依赖到容器并把报告写回 `experiments/results/`；通过 `-Container` 可指定其他已运行的容器名称。`latest` 镜像可能随时间更新，复现时应核对报告中的 SageMath 版本。
+
+已有证据包括：
+
+- **存在性**：8 项恒等式、3375 组整数夹具。
+- **九笔上界**：14 项恒等式、21 个分类夹具的精确重放。
+- **条件族**：10 项恒等式、29 个分类夹具及 19 项回归测试。
+- **一般下界**：192 种种子、3600 项平方根域检查、1680 项圆心条件、840 项分母单位检查。
+
+固定样本不是全域覆盖证明。浮点筛查只负责发现候选；一般参数证明、精确重放和分支覆盖分别负责认证。搜索未命中也不自动成为下界。
+
+## 阅读与目录
 
 | 内容 | 入口 |
 |---|---|
-| 两问及边界 | [PROBLEMS](docs/PROBLEMS.md) |
-| 长度限制的几何含义与完整存在性证明 | [EXISTENCE](docs/EXISTENCE.md) |
-| 输入、目标、工具与声明标准 | [DESIGN](docs/DESIGN.md) |
-| 原作图与名义动作表 | [BASELINE](docs/BASELINE.md) |
-| 来源、版本与引用 | [LITERATURE](docs/LITERATURE.md)、[原文清单](sources/manifest.json) |
-| 下一阶段安排 | [ROADMAP](docs/ROADMAP.md) |
-| 研究进展与证据 | [RESEARCH_LOG](docs/RESEARCH_LOG.md) |
+| 两问与完整存在性证明 | [PROBLEMS](docs/PROBLEMS.md)、[EXISTENCE](docs/EXISTENCE.md) |
+| 输入、工具、计费及覆盖口径 | [DESIGN](docs/DESIGN.md) |
+| 九笔通用构造 | [NINE](docs/NINE.md) |
+| 六笔一般下界 | [LOWER_BOUND](docs/LOWER_BOUND.md) |
+| 特殊条件族 | [REFINEMENTS](docs/REFINEMENTS.md) |
+| 反演与射影变换 | [PROJECTIVITY](docs/PROJECTIVITY.md) |
+| 研究进展、搜索范围与下一方向 | [RESEARCH_LOG](docs/RESEARCH_LOG.md)、[SEARCH_LOG](docs/SEARCH_LOG.md)、[ROADMAP](docs/ROADMAP.md) |
+| 来源与原始问答 | [LITERATURE](docs/LITERATURE.md)、[sources](sources/README.md) |
 
-当前已完成存在性与原作图的受限域基线，下一步可研究限制条件下的调整分支，或在相同覆盖域上搜索省步方案。尚未启动最短步数搜索。
-
-复现原作图的一般参数核验、自动交点闭包重放、依赖台账与回归测试：
-
-```powershell
-pwsh -NoProfile -File experiments/verify-original.ps1
+```text
+docs/                 题目、证明、计分模型与研究记录
+sources/              两篇原始问答快照与来源清单
+experiments/          符号验证、精确重放与有界搜索
+experiments/results/  验证报告、交点依赖和 E 台账
+tests/                回归测试与搜索阳性校准
+animations/           预留的几何导出与动画目录
 ```
 
-12 个一般参数恒等式、12 个分类夹具与 9 项回归测试通过。5 个完整重放均为 10 E；另外 6 个有解输入准确识别原作法限制，1 个输入判为无解。完整证据见 [BASELINE](docs/BASELINE.md#6-精确验证闭环)。
+## 尺规作图优化系列
 
-从仓库根目录使用已有 `sage` Docker 容器复现符号核验：
+这是该系列的第三个项目，结构与验证方法参照 Euclid-CCC-Min。各项目分别定义输入和目标。
 
-```powershell
-Get-Content -Raw experiments/verify_existence.sage.py | docker exec -i sage sage -python
-```
+1. [Euclid-Min](https://github.com/lenovobenben/euclid-min)：正十七边形。
+2. [Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min)：阿波罗尼乌斯三圆相切问题。
+3. [Euclid-Equal-Angle-Min](https://github.com/lenovobenben/euclid-equal-angle-min)：共线四点等视角。
 
-存在性核验结果为 8 个一般参数恒等式及 3375 组整数夹具通过；记录见 [existence-verification.json](experiments/results/existence-verification.json)。有限夹具不替代文档中的一般参数证明。
+本题也见于 1994 年奥地利—波兰数学竞赛第 9 题，出处见 [LITERATURE](docs/LITERATURE.md)。当前结果不声称文献最短或世界纪录。
 
 ## 许可
 
-沿用参考项目的分范围许可：原创代码采用 [Apache 2.0](LICENSE)，原创文档与研究数据采用 [CC BY 4.0](LICENSE-CONTENT)。归档原文仍依其来源权利与许可处理，见 [LICENSE-SCOPE](LICENSE-SCOPE.md)。
+原创代码采用 [Apache 2.0](LICENSE)，原创文档与研究数据采用 [CC BY 4.0](LICENSE-CONTENT)。归档来源材料保留其原有权利与许可，详见 [许可范围](LICENSE-SCOPE.md)。

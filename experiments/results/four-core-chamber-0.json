@@ -1,0 +1,34 @@
+{
+  "status": "budget_exhausted",
+  "region": "chamber",
+  "fixtures": [
+    [
+      47,
+      29,
+      37
+    ],
+    [
+      67,
+      41,
+      53
+    ],
+    [
+      79,
+      47,
+      61
+    ]
+  ],
+  "start_prefix": 0,
+  "repeat_prefix_index": 15,
+  "stats": {
+    "prefixes": 16,
+    "first_lines": 695,
+    "second_lines": 72243,
+    "third_lines": 1818,
+    "fourth_lines": 0,
+    "mismatched_root_counts": 791
+  },
+  "elapsed": 40.000327974000356,
+  "mixed": true,
+  "scope": "2 input circles + <=4 core draws + 2 canonical loci; first center by core draw 3; float screening; skipped mismatched bindings; no lower bound"
+}

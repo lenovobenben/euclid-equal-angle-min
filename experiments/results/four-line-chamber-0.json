@@ -1,0 +1,33 @@
+{
+  "status": "screen_completed_without_hit",
+  "region": "chamber",
+  "fixtures": [
+    [
+      47,
+      29,
+      37
+    ],
+    [
+      67,
+      41,
+      53
+    ],
+    [
+      79,
+      47,
+      61
+    ]
+  ],
+  "start_prefix": 0,
+  "repeat_prefix_index": 66,
+  "stats": {
+    "prefixes": 66,
+    "first_lines": 416,
+    "second_lines": 7716,
+    "third_lines": 456,
+    "fourth_lines": 0,
+    "mismatched_root_counts": 6
+  },
+  "elapsed": 3.20714404499995,
+  "scope": "2 input circles + <=4 lines + 2 canonical loci; float screening; skipped mismatched bindings; no lower bound"
+}

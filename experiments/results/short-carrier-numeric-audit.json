@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "fixtures": [
+    [
+      47,
+      29,
+      37
+    ],
+    [
+      67,
+      41,
+      53
+    ],
+    [
+      79,
+      47,
+      61
+    ]
+  ],
+  "stats": {
+    "first_circles": 12,
+    "seed_pairs": 216,
+    "third_objects": 8836,
+    "fourth_carrier_candidates": 0,
+    "mismatched_root_counts": 46
+  },
+  "hits": [],
+  "positive_control": "known fifth-draw Circle(M,B) retained; target never injected",
+  "elapsed": 1.182853442999658,
+  "scope": "independent multi-fixture numeric cross-check; skipped bindings; not the lower-bound proof"
+}
