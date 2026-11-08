@@ -1,0 +1,6342 @@
+{
+  "rule_id": "collinear-four-equal-angle-e-v1",
+  "sage_version": "10.7",
+  "arithmetic": "SageMath AA exact real algebraic numbers",
+  "coverage": "restricted: delta>0, b<2a, b<2c, a!=b, b!=c",
+  "global_gen_upper": null,
+  "global_rob_upper": null,
+  "restricted_verified_upper": 10,
+  "fixtures": [
+    {
+      "fixture": "regular",
+      "lengths": [
+        "2",
+        "1",
+        "3"
+      ],
+      "delta": "12",
+      "in_original_domain": true,
+      "status": "verified",
+      "failure": null,
+      "score": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "diagnostic_executed_draws": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "distinct_objects": 11,
+      "duplicate_draws": 0,
+      "available_points": 51,
+      "first_target_e_move": 10,
+      "all_targets_e_move": 10,
+      "target_paid_ancestors": {
+        "upper": [
+          "FJ",
+          "GammaC",
+          "GammaD",
+          "GammaM",
+          "GammaN",
+          "LI"
+        ],
+        "lower": [
+          "FJ",
+          "GammaC",
+          "GammaD",
+          "GammaM",
+          "GammaN",
+          "LI"
+        ]
+      },
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          },
+          {
+            "id": "HE",
+            "kind": "line",
+            "supports": [
+              "p7",
+              "p6"
+            ],
+            "support_names": [
+              "H",
+              "E"
+            ],
+            "e_move": 5,
+            "duplicate_of": null
+          },
+          {
+            "id": "FJ",
+            "kind": "line",
+            "supports": [
+              "p9",
+              "p10"
+            ],
+            "support_names": [
+              "F",
+              "J"
+            ],
+            "e_move": 6,
+            "duplicate_of": null
+          },
+          {
+            "id": "KG",
+            "kind": "line",
+            "supports": [
+              "p14",
+              "p8"
+            ],
+            "support_names": [
+              "K",
+              "G"
+            ],
+            "e_move": 7,
+            "duplicate_of": null
+          },
+          {
+            "id": "LI",
+            "kind": "line",
+            "supports": [
+              "p15",
+              "p11"
+            ],
+            "support_names": [
+              "L",
+              "I"
+            ],
+            "e_move": 8,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaM",
+            "kind": "circle",
+            "supports": [
+              "p9",
+              "B"
+            ],
+            "support_names": [
+              "M",
+              "B"
+            ],
+            "e_move": 9,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaN",
+            "kind": "circle",
+            "supports": [
+              "p21",
+              "C"
+            ],
+            "support_names": [
+              "N",
+              "C"
+            ],
+            "e_move": 10,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "p9",
+          "G": "p8",
+          "H": "p7",
+          "I": "p11",
+          "J": "p10",
+          "K": "p14",
+          "L": "p15",
+          "M": "p9",
+          "N": "p21",
+          "P": "p50",
+          "P_prime": "p49"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-2",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "1",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "4",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-4",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "7",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1/4",
+              "-0.9682458365518542?"
+            ]
+          },
+          "p8": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-1/4",
+              "0.9682458365518542?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "2",
+              "0"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "7/6",
+              "-0.9860132971832693?"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "7/6",
+              "0.9860132971832693?"
+            ]
+          },
+          "p12": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "-0.866025403784439?"
+            ]
+          },
+          "p13": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p14": {
+            "created_at": 5,
+            "witness": {
+              "objects": [
+                "HE",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p15": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "9/2",
+              "2.958039891549808?"
+            ]
+          },
+          "p16": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.4346588560844000?",
+              "-1.852136619034622?"
+            ]
+          },
+          "p17": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1.029228710232908?",
+              "0.4177534486938048?"
+            ]
+          },
+          "p18": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "6.345771289767093?",
+              "-1.870122203521586?"
+            ]
+          },
+          "p19": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.875000000000000?",
+              "0.4841229182759271?"
+            ]
+          },
+          "p20": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.3125000000000000?",
+              "0.7261843774138907?"
+            ]
+          },
+          "p21": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1/2",
+              "0"
+            ]
+          },
+          "p22": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-3.201980118141817?",
+              "-1.598512995127592?"
+            ]
+          },
+          "p23": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-0.02024210408040521?",
+              "0.2838285988832325?"
+            ]
+          },
+          "p24": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-0.961933520527565?",
+              "-0.2732835561929154?"
+            ]
+          },
+          "p25": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.702674261268305?",
+              "0.711511688274369?"
+            ]
+          },
+          "p26": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.05555555555555556?",
+              "0.3286710990610898?"
+            ]
+          },
+          "p27": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-0.8428749560154532?",
+              "-0.2028475595414193?"
+            ]
+          },
+          "p28": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.5527323272099775?",
+              "0.6228048438022358?"
+            ]
+          },
+          "p29": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "7/4",
+              "-1.984313483298443?"
+            ]
+          },
+          "p30": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "7/4",
+              "1.984313483298443?"
+            ]
+          },
+          "p31": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/4",
+              "-0.9682458365518542?"
+            ]
+          },
+          "p32": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1/4",
+              "0.9682458365518542?"
+            ]
+          },
+          "p33": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.709005551264195?",
+              "-1.527525231651947?"
+            ]
+          },
+          "p34": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "FJ"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3.290994448735806?",
+              "1.527525231651947?"
+            ]
+          },
+          "p35": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.1628826929126165?",
+              "0.7905694150420948?"
+            ]
+          },
+          "p36": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3.837117307087384?",
+              "-0.7905694150420948?"
+            ]
+          },
+          "p37": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.02418901267148736?",
+              "0.3101144020388735?"
+            ]
+          },
+          "p38": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "2.679514691032217?",
+              "1.881026258368392?"
+            ]
+          },
+          "p39": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2/3",
+              "-1.490711984999860?"
+            ]
+          },
+          "p40": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-2/3",
+              "1.490711984999860?"
+            ]
+          },
+          "p41": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "2/3",
+              "-0.9428090415820634?"
+            ]
+          },
+          "p42": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "2/3",
+              "0.9428090415820634?"
+            ]
+          },
+          "p43": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1.698590429922364?",
+              "0.9018763669697319?"
+            ]
+          },
+          "p44": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "HE"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.07359042992236408?",
+              "-1.385999285245659?"
+            ]
+          },
+          "p45": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1.145938018163875?",
+              "1.353796172505495?"
+            ]
+          },
+          "p46": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.9271880181638741?",
+              "0.4616647710292322?"
+            ]
+          },
+          "p47": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1.790994448735806?",
+              "-0.7637626158259733?"
+            ]
+          },
+          "p48": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.790994448735806?",
+              "0.7637626158259733?"
+            ]
+          },
+          "p49": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "2/5",
+              "-6/5"
+            ]
+          },
+          "p50": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "2/5",
+              "6/5"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "regular_other",
+      "lengths": [
+        "3",
+        "2",
+        "4"
+      ],
+      "delta": "18",
+      "in_original_domain": true,
+      "status": "verified",
+      "failure": null,
+      "score": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "diagnostic_executed_draws": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "distinct_objects": 11,
+      "duplicate_draws": 0,
+      "available_points": 47,
+      "first_target_e_move": 10,
+      "all_targets_e_move": 10,
+      "target_paid_ancestors": {
+        "upper": [
+          "GammaB",
+          "GammaM",
+          "GammaN"
+        ],
+        "lower": [
+          "GammaB",
+          "GammaM",
+          "GammaN"
+        ]
+      },
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          },
+          {
+            "id": "HE",
+            "kind": "line",
+            "supports": [
+              "p7",
+              "p6"
+            ],
+            "support_names": [
+              "H",
+              "E"
+            ],
+            "e_move": 5,
+            "duplicate_of": null
+          },
+          {
+            "id": "FJ",
+            "kind": "line",
+            "supports": [
+              "p9",
+              "p10"
+            ],
+            "support_names": [
+              "F",
+              "J"
+            ],
+            "e_move": 6,
+            "duplicate_of": null
+          },
+          {
+            "id": "KG",
+            "kind": "line",
+            "supports": [
+              "p14",
+              "p8"
+            ],
+            "support_names": [
+              "K",
+              "G"
+            ],
+            "e_move": 7,
+            "duplicate_of": null
+          },
+          {
+            "id": "LI",
+            "kind": "line",
+            "supports": [
+              "p15",
+              "p11"
+            ],
+            "support_names": [
+              "L",
+              "I"
+            ],
+            "e_move": 8,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaM",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "B"
+            ],
+            "support_names": [
+              "M",
+              "B"
+            ],
+            "e_move": 9,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaN",
+            "kind": "circle",
+            "supports": [
+              "p6",
+              "C"
+            ],
+            "support_names": [
+              "N",
+              "C"
+            ],
+            "e_move": 10,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "p9",
+          "G": "p8",
+          "H": "p7",
+          "I": "p11",
+          "J": "p10",
+          "K": "p14",
+          "L": "p15",
+          "M": "D",
+          "N": "p6",
+          "P": "p46",
+          "P_prime": "p45"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-3",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "2",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "6",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-6",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "10",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2/3",
+              "-1.885618083164127?"
+            ]
+          },
+          "p8": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-2/3",
+              "1.885618083164127?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "4",
+              "0"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "-1.936491673103709?"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p12": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1",
+              "-1.732050807568878?"
+            ]
+          },
+          "p13": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1",
+              "1.732050807568878?"
+            ]
+          },
+          "p14": {
+            "created_at": 5,
+            "witness": {
+              "objects": [
+                "HE",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-4",
+              "2.828427124746190?"
+            ]
+          },
+          "p15": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "7",
+              "3.872983346207417?"
+            ]
+          },
+          "p16": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.863353450309967?",
+              "-4.049393283296151?"
+            ]
+          },
+          "p17": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "2.150998205402495?",
+              "1.088662107903635?"
+            ]
+          },
+          "p18": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "9.84900179459751?",
+              "-1.088662107903635?"
+            ]
+          },
+          "p19": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1.555555555555556?",
+              "1.257078722109418?"
+            ]
+          },
+          "p20": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.6818892801701209?",
+              "1.504188861237032?"
+            ]
+          },
+          "p21": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3.910703312422472?",
+              "0.5909423422786648?"
+            ]
+          },
+          "p22": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "4.359430720592577?",
+              "0.4640230649901268?"
+            ]
+          },
+          "p23": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5.575400428312525?",
+              "-1.538607368319698?"
+            ]
+          },
+          "p24": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-0.11209957168747523?",
+              "0.8124229909058064?"
+            ]
+          },
+          "p25": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1.375000000000000?",
+              "1.452368754827782?"
+            ]
+          },
+          "p26": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.2500000000000000?",
+              "0.9682458365518542?"
+            ]
+          },
+          "p27": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1.172775619805625?",
+              "1.365345237417789?"
+            ]
+          },
+          "p28": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "12",
+              "0"
+            ]
+          },
+          "p29": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/3",
+              "-1.972026594366539?"
+            ]
+          },
+          "p30": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1/3",
+              "1.972026594366539?"
+            ]
+          },
+          "p31": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1.205638280310544?",
+              "-3.607505467878928?"
+            ]
+          },
+          "p32": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "FJ"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "8.294361719689456?",
+              "5.543997140982636?"
+            ]
+          },
+          "p33": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.2264973081037424?",
+              "1.632993161855452?"
+            ]
+          },
+          "p34": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "11.77350269189626?",
+              "-1.632993161855452?"
+            ]
+          },
+          "p35": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.0662515012012014?",
+              "0.8891730725809252?"
+            ]
+          },
+          "p36": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "9.43374849879880?",
+              "4.920301946730200?"
+            ]
+          },
+          "p37": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "3/2",
+              "-1.936491673103709?"
+            ]
+          },
+          "p38": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p39": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-4.309401076758503?",
+              "3.265986323710904?"
+            ]
+          },
+          "p40": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "HE"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.3094010767585031?",
+              "-3.265986323710904?"
+            ]
+          },
+          "p41": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-4.636221439659758?",
+              "3.008377722474064?"
+            ]
+          },
+          "p42": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1.821406624844944?",
+              "1.181884684557330?"
+            ]
+          },
+          "p43": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5.674234614174767?",
+              "-1.581138830084190?"
+            ]
+          },
+          "p44": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1.674234614174768?",
+              "1.581138830084190?"
+            ]
+          },
+          "p45": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "3/4",
+              "-2.904737509655563?"
+            ]
+          },
+          "p46": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3/4",
+              "2.904737509655563?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "middle_longer_than_left",
+      "lengths": [
+        "5",
+        "6",
+        "9"
+      ],
+      "delta": "15",
+      "in_original_domain": true,
+      "status": "verified",
+      "failure": null,
+      "score": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "diagnostic_executed_draws": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "distinct_objects": 11,
+      "duplicate_draws": 0,
+      "available_points": 48,
+      "first_target_e_move": 10,
+      "all_targets_e_move": 10,
+      "target_paid_ancestors": {
+        "upper": [
+          "FJ",
+          "GammaA",
+          "GammaB",
+          "GammaC",
+          "GammaD",
+          "GammaM",
+          "GammaN",
+          "HE",
+          "KG",
+          "LI"
+        ],
+        "lower": [
+          "FJ",
+          "GammaA",
+          "GammaB",
+          "GammaC",
+          "GammaD",
+          "GammaM",
+          "GammaN",
+          "HE",
+          "KG",
+          "LI"
+        ]
+      },
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          },
+          {
+            "id": "HE",
+            "kind": "line",
+            "supports": [
+              "p7",
+              "p6"
+            ],
+            "support_names": [
+              "H",
+              "E"
+            ],
+            "e_move": 5,
+            "duplicate_of": null
+          },
+          {
+            "id": "FJ",
+            "kind": "line",
+            "supports": [
+              "p9",
+              "p10"
+            ],
+            "support_names": [
+              "F",
+              "J"
+            ],
+            "e_move": 6,
+            "duplicate_of": null
+          },
+          {
+            "id": "KG",
+            "kind": "line",
+            "supports": [
+              "p14",
+              "p8"
+            ],
+            "support_names": [
+              "K",
+              "G"
+            ],
+            "e_move": 7,
+            "duplicate_of": null
+          },
+          {
+            "id": "LI",
+            "kind": "line",
+            "supports": [
+              "p15",
+              "p11"
+            ],
+            "support_names": [
+              "L",
+              "I"
+            ],
+            "e_move": 8,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaM",
+            "kind": "circle",
+            "supports": [
+              "p17",
+              "B"
+            ],
+            "support_names": [
+              "M",
+              "B"
+            ],
+            "e_move": 9,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaN",
+            "kind": "circle",
+            "supports": [
+              "p22",
+              "C"
+            ],
+            "support_names": [
+              "N",
+              "C"
+            ],
+            "e_move": 10,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "p9",
+          "G": "p8",
+          "H": "p7",
+          "I": "p11",
+          "J": "p10",
+          "K": "p14",
+          "L": "p15",
+          "M": "p17",
+          "N": "p22",
+          "P": "p47",
+          "P_prime": "p46"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-5",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "6",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "15",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-10",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "24",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-6",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-18/5",
+              "-24/5"
+            ]
+          },
+          "p8": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-18/5",
+              "24/5"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "12",
+              "0"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "8",
+              "-5.656854249492380?"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "8",
+              "5.656854249492380?"
+            ]
+          },
+          "p12": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "3",
+              "-5.196152422706632?"
+            ]
+          },
+          "p13": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3",
+              "5.196152422706632?"
+            ]
+          },
+          "p14": {
+            "created_at": 5,
+            "witness": {
+              "objects": [
+                "HE",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-8",
+              "4"
+            ]
+          },
+          "p15": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "18",
+              "8.48528137423857?"
+            ]
+          },
+          "p16": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1.455844122715711?",
+              "-14.91168824543143?"
+            ]
+          },
+          "p17": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-30",
+              "0"
+            ]
+          },
+          "p18": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "48/5",
+              "36/5"
+            ]
+          },
+          "p19": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "438/25",
+              "216/25"
+            ]
+          },
+          "p20": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "42/25",
+              "144/25"
+            ]
+          },
+          "p21": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "18.19635853627202?",
+              "8.76297427932219?"
+            ]
+          },
+          "p22": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-12",
+              "0"
+            ]
+          },
+          "p23": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-9.966819314616413?",
+              "0.5750703400048988?"
+            ]
+          },
+          "p24": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-1.070217722420625?",
+              "3.091409266147570?"
+            ]
+          },
+          "p25": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5.732109937267415?",
+              "1.772827026835995?"
+            ]
+          },
+          "p26": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3.954332159489638?",
+              "4.512566583711095?"
+            ]
+          },
+          "p27": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1.333333333333334?",
+              "3.771236166328254?"
+            ]
+          },
+          "p28": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-6.743396058595773?",
+              "1.486792117191545?"
+            ]
+          },
+          "p29": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "20.39537220773752?",
+              "9.162794946861367?"
+            ]
+          },
+          "p30": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-60",
+              "0"
+            ]
+          },
+          "p31": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-3/5",
+              "-5.969924622639720?"
+            ]
+          },
+          "p32": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-3/5",
+              "5.969924622639720?"
+            ]
+          },
+          "p33": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-20.17229961108799?",
+              "28.34459922217597?"
+            ]
+          },
+          "p34": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "HE"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-1.427700388912015?",
+              "-9.14459922217597?"
+            ]
+          },
+          "p35": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-59.51609730299722?",
+              "-5.366563145999495?"
+            ]
+          },
+          "p36": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-0.4839026970027760?",
+              "5.366563145999495?"
+            ]
+          },
+          "p37": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-57.14667915105844?",
+              "-12.76940919030670?"
+            ]
+          },
+          "p38": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-0.1866541822748961?",
+              "3.341318774486065?"
+            ]
+          },
+          "p39": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "5",
+              "-5.916079783099616?"
+            ]
+          },
+          "p40": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5",
+              "5.916079783099616?"
+            ]
+          },
+          "p41": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-14.883749084919418?",
+              "17.76749816983884?"
+            ]
+          },
+          "p42": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "HE"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.4837490849194184?",
+              "-12.96749816983884?"
+            ]
+          },
+          "p43": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "606/125",
+              "792/125"
+            ]
+          },
+          "p44": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-29.32050807568878?",
+              "-4.898979485566356?"
+            ]
+          },
+          "p45": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5.320508075688773?",
+              "4.898979485566356?"
+            ]
+          },
+          "p46": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5",
+              "-16.58312395177700?"
+            ]
+          },
+          "p47": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-5",
+              "16.58312395177700?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "reflected",
+      "lengths": [
+        "9",
+        "6",
+        "5"
+      ],
+      "delta": "15",
+      "in_original_domain": true,
+      "status": "verified",
+      "failure": null,
+      "score": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "diagnostic_executed_draws": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "distinct_objects": 11,
+      "duplicate_draws": 0,
+      "available_points": 48,
+      "first_target_e_move": 10,
+      "all_targets_e_move": 10,
+      "target_paid_ancestors": {
+        "upper": [
+          "FJ",
+          "GammaA",
+          "GammaB",
+          "GammaC",
+          "GammaD",
+          "GammaM",
+          "GammaN",
+          "HE",
+          "KG",
+          "LI"
+        ],
+        "lower": [
+          "FJ",
+          "GammaA",
+          "GammaB",
+          "GammaC",
+          "GammaD",
+          "GammaM",
+          "GammaN",
+          "HE",
+          "KG",
+          "LI"
+        ]
+      },
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          },
+          {
+            "id": "HE",
+            "kind": "line",
+            "supports": [
+              "p7",
+              "p6"
+            ],
+            "support_names": [
+              "H",
+              "E"
+            ],
+            "e_move": 5,
+            "duplicate_of": null
+          },
+          {
+            "id": "FJ",
+            "kind": "line",
+            "supports": [
+              "p9",
+              "p10"
+            ],
+            "support_names": [
+              "F",
+              "J"
+            ],
+            "e_move": 6,
+            "duplicate_of": null
+          },
+          {
+            "id": "KG",
+            "kind": "line",
+            "supports": [
+              "p14",
+              "p8"
+            ],
+            "support_names": [
+              "K",
+              "G"
+            ],
+            "e_move": 7,
+            "duplicate_of": null
+          },
+          {
+            "id": "LI",
+            "kind": "line",
+            "supports": [
+              "p15",
+              "p11"
+            ],
+            "support_names": [
+              "L",
+              "I"
+            ],
+            "e_move": 8,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaM",
+            "kind": "circle",
+            "supports": [
+              "p17",
+              "B"
+            ],
+            "support_names": [
+              "M",
+              "B"
+            ],
+            "e_move": 9,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaN",
+            "kind": "circle",
+            "supports": [
+              "p24",
+              "C"
+            ],
+            "support_names": [
+              "N",
+              "C"
+            ],
+            "e_move": 10,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "p9",
+          "G": "p8",
+          "H": "p7",
+          "I": "p11",
+          "J": "p10",
+          "K": "p14",
+          "L": "p15",
+          "M": "p17",
+          "N": "p24",
+          "P": "p47",
+          "P_prime": "p46"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-9",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "6",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "11",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-18",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "16",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-6",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2",
+              "-5.656854249492380?"
+            ]
+          },
+          "p8": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-2",
+              "5.656854249492380?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "12",
+              "0"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "48/5",
+              "-24/5"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "48/5",
+              "24/5"
+            ]
+          },
+          "p12": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "3",
+              "-5.196152422706632?"
+            ]
+          },
+          "p13": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3",
+              "5.196152422706632?"
+            ]
+          },
+          "p14": {
+            "created_at": 5,
+            "witness": {
+              "objects": [
+                "HE",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-12",
+              "8.48528137423857?"
+            ]
+          },
+          "p15": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "14",
+              "4"
+            ]
+          },
+          "p16": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "4.544155877284289?",
+              "-14.91168824543143?"
+            ]
+          },
+          "p17": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "18",
+              "0"
+            ]
+          },
+          "p18": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "7.070217722420625?",
+              "3.091409266147570?"
+            ]
+          },
+          "p19": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "15.966819314616413?",
+              "0.5750703400048988?"
+            ]
+          },
+          "p20": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "4.666666666666667?",
+              "3.771236166328254?"
+            ]
+          },
+          "p21": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "2.045667840510363?",
+              "4.512566583711095?"
+            ]
+          },
+          "p22": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "11.73210993726742?",
+              "1.772827026835995?"
+            ]
+          },
+          "p23": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "12.74339605859578?",
+              "1.486792117191545?"
+            ]
+          },
+          "p24": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "36",
+              "0"
+            ]
+          },
+          "p25": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-288/25",
+              "216/25"
+            ]
+          },
+          "p26": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-18/5",
+              "36/5"
+            ]
+          },
+          "p27": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "108/25",
+              "144/25"
+            ]
+          },
+          "p28": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-12.19635853627202?",
+              "8.76297427932219?"
+            ]
+          },
+          "p29": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-14.39537220773753?",
+              "9.162794946861367?"
+            ]
+          },
+          "p30": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1",
+              "-5.916079783099616?"
+            ]
+          },
+          "p31": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1",
+              "5.916079783099616?"
+            ]
+          },
+          "p32": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "5.516250915080582?",
+              "-12.96749816983884?"
+            ]
+          },
+          "p33": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "FJ"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "20.88374908491942?",
+              "17.76749816983884?"
+            ]
+          },
+          "p34": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.6794919243112270?",
+              "4.898979485566356?"
+            ]
+          },
+          "p35": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "35.32050807568878?",
+              "-4.898979485566356?"
+            ]
+          },
+          "p36": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "144/125",
+              "792/125"
+            ]
+          },
+          "p37": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "66",
+              "0"
+            ]
+          },
+          "p38": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "33/5",
+              "-5.969924622639720?"
+            ]
+          },
+          "p39": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "33/5",
+              "5.969924622639720?"
+            ]
+          },
+          "p40": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "7.427700388912015?",
+              "-9.14459922217597?"
+            ]
+          },
+          "p41": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "FJ"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "26.17229961108799?",
+              "28.34459922217597?"
+            ]
+          },
+          "p42": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "6.186654182274896?",
+              "3.341318774486065?"
+            ]
+          },
+          "p43": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "63.14667915105844?",
+              "-12.76940919030670?"
+            ]
+          },
+          "p44": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "6.483902697002776?",
+              "5.366563145999495?"
+            ]
+          },
+          "p45": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "65.5160973029973?",
+              "-5.366563145999495?"
+            ]
+          },
+          "p46": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "11",
+              "-16.58312395177700?"
+            ]
+          },
+          "p47": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "11",
+              "16.58312395177700?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "symmetric_outer",
+      "lengths": [
+        "2",
+        "1",
+        "2"
+      ],
+      "delta": "7",
+      "in_original_domain": true,
+      "status": "verified",
+      "failure": null,
+      "score": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "diagnostic_executed_draws": {
+        "lines": 4,
+        "circles": 6,
+        "total": 10
+      },
+      "distinct_objects": 11,
+      "duplicate_draws": 0,
+      "available_points": 50,
+      "first_target_e_move": 10,
+      "all_targets_e_move": 10,
+      "target_paid_ancestors": {
+        "upper": [
+          "GammaB",
+          "GammaC",
+          "GammaM",
+          "GammaN"
+        ],
+        "lower": [
+          "GammaB",
+          "GammaC",
+          "GammaM",
+          "GammaN"
+        ]
+      },
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          },
+          {
+            "id": "HE",
+            "kind": "line",
+            "supports": [
+              "p7",
+              "p6"
+            ],
+            "support_names": [
+              "H",
+              "E"
+            ],
+            "e_move": 5,
+            "duplicate_of": null
+          },
+          {
+            "id": "FJ",
+            "kind": "line",
+            "supports": [
+              "p9",
+              "p10"
+            ],
+            "support_names": [
+              "F",
+              "J"
+            ],
+            "e_move": 6,
+            "duplicate_of": null
+          },
+          {
+            "id": "KG",
+            "kind": "line",
+            "supports": [
+              "p14",
+              "p8"
+            ],
+            "support_names": [
+              "K",
+              "G"
+            ],
+            "e_move": 7,
+            "duplicate_of": null
+          },
+          {
+            "id": "LI",
+            "kind": "line",
+            "supports": [
+              "p15",
+              "p11"
+            ],
+            "support_names": [
+              "L",
+              "I"
+            ],
+            "e_move": 8,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaM",
+            "kind": "circle",
+            "supports": [
+              "p9",
+              "B"
+            ],
+            "support_names": [
+              "M",
+              "B"
+            ],
+            "e_move": 9,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaN",
+            "kind": "circle",
+            "supports": [
+              "p6",
+              "C"
+            ],
+            "support_names": [
+              "N",
+              "C"
+            ],
+            "e_move": 10,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "p9",
+          "G": "p8",
+          "H": "p7",
+          "I": "p11",
+          "J": "p10",
+          "K": "p14",
+          "L": "p15",
+          "M": "p9",
+          "N": "p6",
+          "P": "p49",
+          "P_prime": "p48"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-2",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "1",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "3",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-4",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1/4",
+              "-0.9682458365518542?"
+            ]
+          },
+          "p8": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-1/4",
+              "0.9682458365518542?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "2",
+              "0"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "5/4",
+              "-0.9682458365518542?"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5/4",
+              "0.9682458365518542?"
+            ]
+          },
+          "p12": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "-0.866025403784439?"
+            ]
+          },
+          "p13": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p14": {
+            "created_at": 5,
+            "witness": {
+              "objects": [
+                "HE",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p15": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "7/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p16": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.500000000000000?",
+              "-1.936491673103709?"
+            ]
+          },
+          "p17": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1.042871308222012?",
+              "0.4118826092703824?"
+            ]
+          },
+          "p18": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "4.644628691777989?",
+              "-1.138066986684273?"
+            ]
+          },
+          "p19": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.875000000000000?",
+              "0.4841229182759271?"
+            ]
+          },
+          "p20": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.3125000000000000?",
+              "0.7261843774138907?"
+            ]
+          },
+          "p21": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-3.644628691777989?",
+              "-1.138066986684273?"
+            ]
+          },
+          "p22": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-0.04287130822201131?",
+              "0.4118826092703824?"
+            ]
+          },
+          "p23": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.687500000000000?",
+              "0.7261843774138907?"
+            ]
+          },
+          "p24": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.1250000000000000?",
+              "0.4841229182759271?"
+            ]
+          },
+          "p25": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "0.645497224367903?"
+            ]
+          },
+          "p26": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "4",
+              "0"
+            ]
+          },
+          "p27": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "-1.936491673103709?"
+            ]
+          },
+          "p28": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p29": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/4",
+              "-0.9682458365518542?"
+            ]
+          },
+          "p30": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1/4",
+              "0.9682458365518542?"
+            ]
+          },
+          "p31": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.7752551286084110?",
+              "-1.581138830084190?"
+            ]
+          },
+          "p32": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "FJ"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3.224744871391589?",
+              "1.581138830084190?"
+            ]
+          },
+          "p33": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.1628826929126165?",
+              "0.7905694150420948?"
+            ]
+          },
+          "p34": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3.837117307087384?",
+              "-0.7905694150420948?"
+            ]
+          },
+          "p35": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.05189995268192187?",
+              "0.4526656665126059?"
+            ]
+          },
+          "p36": {
+            "created_at": 9,
+            "witness": {
+              "objects": [
+                "GammaM",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3.010600047318079?",
+              "1.725887465729066?"
+            ]
+          },
+          "p37": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-3",
+              "0"
+            ]
+          },
+          "p38": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-3/2",
+              "-1.936491673103709?"
+            ]
+          },
+          "p39": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-3/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p40": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "3/4",
+              "-0.9682458365518542?"
+            ]
+          },
+          "p41": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3/4",
+              "0.9682458365518542?"
+            ]
+          },
+          "p42": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2.224744871391589?",
+              "1.581138830084190?"
+            ]
+          },
+          "p43": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "HE"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.2247448713915891?",
+              "-1.581138830084190?"
+            ]
+          },
+          "p44": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2.010600047318079?",
+              "1.725887465729066?"
+            ]
+          },
+          "p45": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "KG"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.9481000473180781?",
+              "0.4526656665126059?"
+            ]
+          },
+          "p46": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2.837117307087384?",
+              "-0.7905694150420948?"
+            ]
+          },
+          "p47": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "LI"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.8371173070873836?",
+              "0.7905694150420948?"
+            ]
+          },
+          "p48": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "-1.322875655532296?"
+            ]
+          },
+          "p49": {
+            "created_at": 10,
+            "witness": {
+              "objects": [
+                "GammaN",
+                "GammaM"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "1.322875655532296?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "left_parallel",
+      "lengths": [
+        "1",
+        "1",
+        "2"
+      ],
+      "delta": "2",
+      "in_original_domain": false,
+      "status": "construction_not_applicable",
+      "failure": "intersection_binding:M:candidates=0",
+      "score": null,
+      "diagnostic_executed_draws": {
+        "lines": 3,
+        "circles": 4,
+        "total": 7
+      },
+      "distinct_objects": 8,
+      "duplicate_draws": 0,
+      "available_points": 20,
+      "first_target_e_move": null,
+      "all_targets_e_move": null,
+      "target_paid_ancestors": {},
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          },
+          {
+            "id": "HE",
+            "kind": "line",
+            "supports": [
+              "p6",
+              "A"
+            ],
+            "support_names": [
+              "H",
+              "E"
+            ],
+            "e_move": 5,
+            "duplicate_of": null
+          },
+          {
+            "id": "FJ",
+            "kind": "line",
+            "supports": [
+              "p8",
+              "p9"
+            ],
+            "support_names": [
+              "F",
+              "J"
+            ],
+            "e_move": 6,
+            "duplicate_of": null
+          },
+          {
+            "id": "KG",
+            "kind": "line",
+            "supports": [
+              "p13",
+              "p7"
+            ],
+            "support_names": [
+              "K",
+              "G"
+            ],
+            "e_move": 7,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "p8",
+          "G": "p7",
+          "H": "p6",
+          "I": "p10",
+          "J": "p9",
+          "K": "p13",
+          "L": "p14"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-1",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "1",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "3",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1/2",
+              "-0.866025403784439?"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-1/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p8": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "2",
+              "0"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "5/4",
+              "-0.9682458365518542?"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5/4",
+              "0.9682458365518542?"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "-0.866025403784439?"
+            ]
+          },
+          "p12": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p13": {
+            "created_at": 5,
+            "witness": {
+              "objects": [
+                "HE",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-3/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p14": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "7/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p15": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.2811529493745268?",
+              "-2.219022000583399?"
+            ]
+          },
+          "p16": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1.197224362268006?",
+              "0.866025403784439?"
+            ]
+          },
+          "p17": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "4.802775637731994?",
+              "0.866025403784439?"
+            ]
+          },
+          "p18": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p19": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "FJ"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "2.670820393249937?",
+              "0.866025403784439?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "right_parallel",
+      "lengths": [
+        "2",
+        "1",
+        "1"
+      ],
+      "delta": "2",
+      "in_original_domain": false,
+      "status": "construction_not_applicable",
+      "failure": "intersection_binding:N:candidates=0",
+      "score": null,
+      "diagnostic_executed_draws": {
+        "lines": 4,
+        "circles": 4,
+        "total": 8
+      },
+      "distinct_objects": 9,
+      "duplicate_draws": 0,
+      "available_points": 25,
+      "first_target_e_move": null,
+      "all_targets_e_move": null,
+      "target_paid_ancestors": {},
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          },
+          {
+            "id": "HE",
+            "kind": "line",
+            "supports": [
+              "p7",
+              "p6"
+            ],
+            "support_names": [
+              "H",
+              "E"
+            ],
+            "e_move": 5,
+            "duplicate_of": null
+          },
+          {
+            "id": "FJ",
+            "kind": "line",
+            "supports": [
+              "D",
+              "p9"
+            ],
+            "support_names": [
+              "F",
+              "J"
+            ],
+            "e_move": 6,
+            "duplicate_of": null
+          },
+          {
+            "id": "KG",
+            "kind": "line",
+            "supports": [
+              "p13",
+              "p8"
+            ],
+            "support_names": [
+              "K",
+              "G"
+            ],
+            "e_move": 7,
+            "duplicate_of": null
+          },
+          {
+            "id": "LI",
+            "kind": "line",
+            "supports": [
+              "p14",
+              "p10"
+            ],
+            "support_names": [
+              "L",
+              "I"
+            ],
+            "e_move": 8,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "D",
+          "G": "p8",
+          "H": "p7",
+          "I": "p10",
+          "J": "p9",
+          "K": "p13",
+          "L": "p14",
+          "M": "D"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-2",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "1",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "2",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-4",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1/4",
+              "-0.9682458365518542?"
+            ]
+          },
+          "p8": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-1/4",
+              "0.9682458365518542?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "3/2",
+              "-0.866025403784439?"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "3/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "-0.866025403784439?"
+            ]
+          },
+          "p12": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p13": {
+            "created_at": 5,
+            "witness": {
+              "objects": [
+                "HE",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5/2",
+              "1.936491673103709?"
+            ]
+          },
+          "p14": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p15": {
+            "created_at": 6,
+            "witness": {
+              "objects": [
+                "FJ",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.7188470506254732?",
+              "-2.219022000583399?"
+            ]
+          },
+          "p16": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1.081441346456309?",
+              "0.3952847075210474?"
+            ]
+          },
+          "p17": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "2.918558653543692?",
+              "-0.3952847075210474?"
+            ]
+          },
+          "p18": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "0.875000000000000?",
+              "0.4841229182759271?"
+            ]
+          },
+          "p19": {
+            "created_at": 7,
+            "witness": {
+              "objects": [
+                "KG",
+                "GammaC"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "0.3125000000000000?",
+              "0.7261843774138907?"
+            ]
+          },
+          "p20": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-3.802775637731995?",
+              "0.866025403784439?"
+            ]
+          },
+          "p21": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-0.1972243622680054?",
+              "0.866025403784439?"
+            ]
+          },
+          "p22": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1/2",
+              "0.866025403784439?"
+            ]
+          },
+          "p23": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "HE"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-1.670820393249937?",
+              "0.866025403784439?"
+            ]
+          },
+          "p24": {
+            "created_at": 8,
+            "witness": {
+              "objects": [
+                "LI",
+                "KG"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-0.01246117974981073?",
+              "0.866025403784439?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "left_tangent",
+      "lengths": [
+        "1",
+        "2",
+        "7"
+      ],
+      "delta": "1",
+      "in_original_domain": false,
+      "status": "construction_not_applicable",
+      "failure": "intersection_binding:G:candidates=0",
+      "score": null,
+      "diagnostic_executed_draws": {
+        "lines": 0,
+        "circles": 4,
+        "total": 4
+      },
+      "distinct_objects": 5,
+      "duplicate_draws": 0,
+      "available_points": 11,
+      "first_target_e_move": null,
+      "all_targets_e_move": null,
+      "target_paid_ancestors": {},
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p4",
+          "F": "p6"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-1",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "2",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "9",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "16",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "4",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "16/7",
+              "-1.979486637221575?"
+            ]
+          },
+          "p8": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "16/7",
+              "1.979486637221575?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1",
+              "-1.732050807568878?"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1",
+              "1.732050807568878?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "right_tangent",
+      "lengths": [
+        "7",
+        "2",
+        "1"
+      ],
+      "delta": "1",
+      "in_original_domain": false,
+      "status": "construction_not_applicable",
+      "failure": "intersection_binding:I:candidates=0",
+      "score": null,
+      "diagnostic_executed_draws": {
+        "lines": 0,
+        "circles": 4,
+        "total": 4
+      },
+      "distinct_objects": 5,
+      "duplicate_draws": 0,
+      "available_points": 11,
+      "first_target_e_move": null,
+      "all_targets_e_move": null,
+      "target_paid_ancestors": {},
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "p5",
+          "G": "p8",
+          "H": "p7"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-7",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "2",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "3",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-14",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "4",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-2/7",
+              "-1.979486637221575?"
+            ]
+          },
+          "p8": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-2/7",
+              "1.979486637221575?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "1",
+              "-1.732050807568878?"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "1",
+              "1.732050807568878?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "left_disjoint",
+      "lengths": [
+        "2",
+        "5",
+        "40"
+      ],
+      "delta": "5",
+      "in_original_domain": false,
+      "status": "construction_not_applicable",
+      "failure": "intersection_binding:G:candidates=0",
+      "score": null,
+      "diagnostic_executed_draws": {
+        "lines": 0,
+        "circles": 4,
+        "total": 4
+      },
+      "distinct_objects": 5,
+      "duplicate_draws": 0,
+      "available_points": 12,
+      "first_target_e_move": null,
+      "all_targets_e_move": null,
+      "target_paid_ancestors": {},
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "p7"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-2",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "5",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "45",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-4",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "85",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "10",
+              "0"
+            ]
+          },
+          "p8": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "85/16",
+              "-4.990224819584785?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaD"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "85/16",
+              "4.990224819584785?"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "-4.330127018922193?"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "4.330127018922193?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "right_disjoint",
+      "lengths": [
+        "40",
+        "5",
+        "2"
+      ],
+      "delta": "5",
+      "in_original_domain": false,
+      "status": "construction_not_applicable",
+      "failure": "intersection_binding:I:candidates=0",
+      "score": null,
+      "diagnostic_executed_draws": {
+        "lines": 0,
+        "circles": 4,
+        "total": 4
+      },
+      "distinct_objects": 5,
+      "duplicate_draws": 0,
+      "available_points": 12,
+      "first_target_e_move": null,
+      "all_targets_e_move": null,
+      "target_paid_ancestors": {},
+      "trace": {
+        "actions": [
+          {
+            "id": "GammaA",
+            "kind": "circle",
+            "supports": [
+              "A",
+              "B"
+            ],
+            "support_names": [
+              "A",
+              "B"
+            ],
+            "e_move": 1,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaD",
+            "kind": "circle",
+            "supports": [
+              "D",
+              "C"
+            ],
+            "support_names": [
+              "D",
+              "C"
+            ],
+            "e_move": 2,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaB",
+            "kind": "circle",
+            "supports": [
+              "B",
+              "C"
+            ],
+            "support_names": [
+              "B",
+              "C"
+            ],
+            "e_move": 3,
+            "duplicate_of": null
+          },
+          {
+            "id": "GammaC",
+            "kind": "circle",
+            "supports": [
+              "C",
+              "B"
+            ],
+            "support_names": [
+              "C",
+              "B"
+            ],
+            "e_move": 4,
+            "duplicate_of": null
+          }
+        ],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "p6",
+          "F": "p9",
+          "G": "p8",
+          "H": "p7"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-40",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "5",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "7",
+              "0"
+            ]
+          },
+          "p4": {
+            "created_at": 1,
+            "witness": {
+              "objects": [
+                "GammaA",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-80",
+              "0"
+            ]
+          },
+          "p5": {
+            "created_at": 2,
+            "witness": {
+              "objects": [
+                "GammaD",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "9",
+              "0"
+            ]
+          },
+          "p6": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "l"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5",
+              "0"
+            ]
+          },
+          "p7": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "-5/16",
+              "-4.990224819584785?"
+            ]
+          },
+          "p8": {
+            "created_at": 3,
+            "witness": {
+              "objects": [
+                "GammaB",
+                "GammaA"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "-5/16",
+              "4.990224819584785?"
+            ]
+          },
+          "p9": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "l"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "10",
+              "0"
+            ]
+          },
+          "p10": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 0
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "-4.330127018922193?"
+            ]
+          },
+          "p11": {
+            "created_at": 4,
+            "witness": {
+              "objects": [
+                "GammaC",
+                "GammaB"
+              ],
+              "lexicographic_root_index": 1
+            },
+            "display_coordinates_only": [
+              "5/2",
+              "4.330127018922193?"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    },
+    {
+      "fixture": "no_solution",
+      "lengths": [
+        "1",
+        "1",
+        "1"
+      ],
+      "delta": "0",
+      "in_original_domain": false,
+      "status": "no_solution_input",
+      "failure": null,
+      "score": null,
+      "diagnostic_executed_draws": {
+        "lines": 0,
+        "circles": 0,
+        "total": 0
+      },
+      "distinct_objects": 1,
+      "duplicate_draws": 0,
+      "available_points": 4,
+      "first_target_e_move": null,
+      "all_targets_e_move": null,
+      "target_paid_ancestors": {},
+      "trace": {
+        "actions": [],
+        "bindings": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D"
+        },
+        "points": {
+          "A": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "-1",
+              "0"
+            ]
+          },
+          "B": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "0",
+              "0"
+            ]
+          },
+          "C": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "1",
+              "0"
+            ]
+          },
+          "D": {
+            "created_at": 0,
+            "witness": {
+              "kind": "input"
+            },
+            "display_coordinates_only": [
+              "2",
+              "0"
+            ]
+          }
+        },
+        "coordinate_note": "AA decimal strings are display only; witnesses and exact replay determine points."
+      }
+    }
+  ]
+}

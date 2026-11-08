@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "archived_on": "2026-11-09",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "直线外点条件",
+      "conversation_id": "6932188d-7dd8-8332-89cc-72d43e41c0df",
+      "repository": "https://github.com/lenovobenben/ai-math-notes",
+      "commit": "50cccad292a296087770a377080dcde9ef40657b",
+      "path": "chatgpt/经典数学题100例-4/001_直线外点条件__6932188d-7dd8-8332-89cc-72d43e41c0df/001_直线外点条件__6932188d-7dd8-8332-89cc-72d43e41c0df.md",
+      "url": "https://github.com/lenovobenben/ai-math-notes/blob/50cccad292a296087770a377080dcde9ef40657b/chatgpt/经典数学题100例-4/001_直线外点条件__6932188d-7dd8-8332-89cc-72d43e41c0df/001_直线外点条件__6932188d-7dd8-8332-89cc-72d43e41c0df.md",
+      "snapshot": "existence-original.md",
+      "git_blob_sha1": "d1a2cf123948dbdee72c838991083e4675180edf",
+      "sha256": "65bf473e3914a9332393ec30864cfd8623e4dd5d7fe22e2525448bf1a46cd41b",
+      "verification_status": "archived_unverified"
+    },
+    {
+      "id": "S2",
+      "title": "尺规作图证明",
+      "conversation_id": "694a80c9-aac4-8328-b8b4-38d7635da26e",
+      "repository": "https://github.com/lenovobenben/ai-math-notes",
+      "commit": "50cccad292a296087770a377080dcde9ef40657b",
+      "path": "chatgpt/经典数学题100例-4/001_尺规作图证明__694a80c9-aac4-8328-b8b4-38d7635da26e/001_尺规作图证明__694a80c9-aac4-8328-b8b4-38d7635da26e.md",
+      "url": "https://github.com/lenovobenben/ai-math-notes/blob/50cccad292a296087770a377080dcde9ef40657b/chatgpt/经典数学题100例-4/001_尺规作图证明__694a80c9-aac4-8328-b8b4-38d7635da26e/001_尺规作图证明__694a80c9-aac4-8328-b8b4-38d7635da26e.md",
+      "snapshot": "construction-original.md",
+      "git_blob_sha1": "5884044da17d00e6110e815fe8f689f80616879d",
+      "sha256": "dc9619a2be59e7be89528c8eb2270f6d47c8692d54a8396a22a370fb929f9b68",
+      "verification_status": "archived_unverified"
+    }
+  ]
+}

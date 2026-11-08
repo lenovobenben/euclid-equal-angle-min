@@ -1,0 +1,7 @@
+{
+  "sage_version": "10.7",
+  "status": "passed",
+  "module_identities": 10,
+  "pair_identities": 2,
+  "scope": "general rational identities modulo h^2=4a^2-b^2"
+}

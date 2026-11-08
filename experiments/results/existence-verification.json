@@ -1,0 +1,10 @@
+{
+  "sage_version": "10.7",
+  "symbolic_identities": 8,
+  "integer_fixtures": 3375,
+  "valid_fixtures": 1437,
+  "nonsingular_boundary_fixtures": 14,
+  "singular_fixtures": 25,
+  "status": "passed",
+  "scope": "general rational-function identities plus finite exact checks; see proof"
+}
