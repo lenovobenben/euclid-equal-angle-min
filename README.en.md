@@ -15,13 +15,31 @@ general-parameter and coverage proofs, exact replays, and bounded searches.
 **The full-domain upper bound is 9 E and the proved generic lower bound is 6 E.
 Nine-move minimality remains open.**
 
-[Nine-move construction](docs/NINE.md) · [Existence](docs/EXISTENCE.md) ·
+[Watch the nine-move animation](https://raw.githubusercontent.com/lenovobenben/euclid-equal-angle-min/main/animations/e9/media/E9EqualAngle_4k60.mp4) · [Nine-move construction](docs/NINE.md) · [Existence](docs/EXISTENCE.md) ·
 [Exact replay](experiments/results/nine-replay.json) · [Generic lower bound](docs/LOWER_BOUND.md)
 
-![Equal-angle example with consecutive lengths 3, 1, 2 and two mirror solutions](docs/assets/equal-angle.svg)
+[![Two mirror solutions P and P′ from the nine-move construction](animations/e9/preview.png)](https://raw.githubusercontent.com/lenovobenben/euclid-equal-angle-min/main/animations/e9/media/E9EqualAngle_4k60.mp4)
 
-The illustration is not a charged construction trace. Manim animations will be added later.
-Detailed mathematical documents are currently in Chinese.
+*Click the preview to view or download the animation, 3840 × 2160, 60 fps, 51.7 seconds.*
+
+## Watch the construction
+
+Starting from the four input points and their complete line, the animation executes
+**4 lines + 5 circles = 9 E**, highlights the reuse of intersection T, and obtains
+both mirror solutions P and P′ at move 9. The fixture has `AB=3, BC=1, CD=5/2`
+and follows the shared-circle main branch. Full-domain coverage combines relabeling,
+the nine-move branch, and the equal-gap branch.
+
+The dark background and fine strokes follow Euclid-CCC-Min. Magenta marks free inputs,
+gold the current draw, pale blue auxiliary objects, and green the targets. Each draw
+highlights its existing support points, with a temporary radius for circles.
+SageMath exact replay exports the geometry for Manim. The final connecting segments
+and equal-angle arcs are labeled as result illustrations.
+
+Source, export, and rendering commands are in the [animation guide](animations/e9/README.md),
+with the sequence in the [storyboard](animations/e9/STORYBOARD.md). A separate
+[static illustration](docs/assets/equal-angle.svg) uses consecutive lengths 3, 1, 2.
+Video captions and detailed mathematical documents are currently in Chinese.
 
 ## Current verified upper bounds
 
@@ -129,7 +147,7 @@ older latest-based commands.
 Prioritize a **9→8 E** improvement over the entire solvable domain. A generic result is recorded
 separately and needs robust repairs; special 7 E / 2 E families do not improve the general score.
 New experiments specify state, target, domain, budget, and stopping conditions.
-Future animation consumes verified geometry only. See [ROADMAP](docs/ROADMAP.md) and [SEARCH_LOG](docs/SEARCH_LOG.md).
+The animation consumes verified geometry only. See [ROADMAP](docs/ROADMAP.md) and [SEARCH_LOG](docs/SEARCH_LOG.md).
 
 ## Documentation and code
 

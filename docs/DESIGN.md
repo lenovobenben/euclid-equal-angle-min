@@ -100,6 +100,6 @@ Euclid-Equal-Angle-Min 是尺规作图优化系列第三个项目。前两个为
 
 采用独立 Python 研究脚本，与参考项目一致，不预先引入完整应用框架。精确判定优先有理数与可审计的代数表示；数值搜索与动画坐标不承担证明责任。可视化只读取验证后导出的几何轨迹。
 
-脚本前缀沿用 `replay_`、`verify_`、`search_`、`scan_`、`audit_`。每个搜索实验须声明初态、候选范围、预算与停止条件，结果保存到 `experiments/results/`。当前已提供存在性、原作图与 9 E 新作法的 SageMath 符号核验、AA 精确重放、自动交点闭包与依赖记录，以及多夹具有界数值筛查；尚未制作动画。
+脚本前缀沿用 `replay_`、`verify_`、`search_`、`scan_`、`audit_`。每个搜索实验须声明初态、候选范围、预算与停止条件，结果保存到 `experiments/results/`。当前已提供存在性、原作图与 9 E 新作法的 SageMath 符号核验、AA 精确重放、自动交点闭包与依赖记录，以及多夹具有界数值筛查；[九笔动画](../animations/e9/README.md) 只读取精确重放导出的显示几何。
 
 系列信息架构与四项目对照见 [SERIES](SERIES.md)，完整运行环境与命令见 [REPRODUCING](REPRODUCING.md)。

@@ -1,0 +1,379 @@
+{
+  "schema": "euclid-equal-angle-min-manim-e9/v1",
+  "source": {
+    "replay": "experiments/replay_nine.py",
+    "class": "NineReplay",
+    "rule_id": "collinear-four-equal-angle-e-v1",
+    "sage_version": "10.7",
+    "arithmetic": "SageMath QQ/AA",
+    "lengths_exact": [
+      "3",
+      "1",
+      "5/2"
+    ],
+    "reversed_input_labels": false,
+    "trace_sha256": "b8a58a6317f5d5839f7eaa7cc45c6006e3ac123fff1325f9cc47dc984fb3e996"
+  },
+  "verified_result": {
+    "fixture_status": "verified",
+    "branch": "shared_circle_9",
+    "line_draws": 4,
+    "circle_draws": 5,
+    "total_e": 9,
+    "first_target_e": 9,
+    "all_targets_e": 9,
+    "program_coverage_reference": "docs/NINE.md",
+    "minimality_proved": false
+  },
+  "initial": {
+    "points": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "line": {
+      "a": 0.0,
+      "b": 1.0,
+      "c": 0.0
+    }
+  },
+  "points": {
+    "A": {
+      "node": "A",
+      "at": [
+        -3.0,
+        0.0
+      ],
+      "available_after": 0,
+      "witness": {
+        "kind": "input"
+      }
+    },
+    "B": {
+      "node": "B",
+      "at": [
+        0.0,
+        0.0
+      ],
+      "available_after": 0,
+      "witness": {
+        "kind": "input"
+      }
+    },
+    "C": {
+      "node": "C",
+      "at": [
+        1.0,
+        0.0
+      ],
+      "available_after": 0,
+      "witness": {
+        "kind": "input"
+      }
+    },
+    "D": {
+      "node": "D",
+      "at": [
+        3.5,
+        0.0
+      ],
+      "available_after": 0,
+      "witness": {
+        "kind": "input"
+      }
+    },
+    "E": {
+      "node": "p5",
+      "at": [
+        -1.0,
+        0.0
+      ],
+      "available_after": 2,
+      "witness": {
+        "objects": [
+          "GammaB",
+          "l"
+        ],
+        "lexicographic_root_index": 0
+      }
+    },
+    "G": {
+      "node": "p7",
+      "at": [
+        -0.16666666666666669,
+        0.9860132971832694
+      ],
+      "available_after": 2,
+      "witness": {
+        "objects": [
+          "GammaB",
+          "GammaA"
+        ],
+        "lexicographic_root_index": 1
+      }
+    },
+    "H": {
+      "node": "p6",
+      "at": [
+        -0.16666666666666669,
+        -0.9860132971832694
+      ],
+      "available_after": 2,
+      "witness": {
+        "objects": [
+          "GammaB",
+          "GammaA"
+        ],
+        "lexicographic_root_index": 0
+      }
+    },
+    "K": {
+      "node": "p11",
+      "at": [
+        -3.5,
+        2.9580398915498076
+      ],
+      "available_after": 4,
+      "witness": {
+        "objects": [
+          "HE",
+          "GammaA"
+        ],
+        "lexicographic_root_index": 0
+      }
+    },
+    "M": {
+      "node": "p14",
+      "at": [
+        1.5,
+        0.0
+      ],
+      "available_after": 5,
+      "witness": {
+        "objects": [
+          "KG",
+          "l"
+        ],
+        "lexicographic_root_index": 0
+      }
+    },
+    "T": {
+      "node": "p15",
+      "at": [
+        0.9444444444444444,
+        0.3286710990610898
+      ],
+      "available_after": 5,
+      "witness": {
+        "objects": [
+          "KG",
+          "GammaB"
+        ],
+        "lexicographic_root_index": 1
+      }
+    },
+    "R": {
+      "node": "p18",
+      "at": [
+        0.5833333333333333,
+        2.4650332429581736
+      ],
+      "available_after": 6,
+      "witness": {
+        "objects": [
+          "CT",
+          "GammaR"
+        ],
+        "lexicographic_root_index": 0
+      }
+    },
+    "N": {
+      "node": "p21",
+      "at": [
+        -0.6666666666666667,
+        0.0
+      ],
+      "available_after": 7,
+      "witness": {
+        "objects": [
+          "GR",
+          "l"
+        ],
+        "lexicographic_root_index": 0
+      }
+    },
+    "P": {
+      "node": "p46",
+      "at": [
+        0.5384615384615385,
+        1.1512791959304436
+      ],
+      "available_after": 9,
+      "witness": {
+        "objects": [
+          "GammaN",
+          "GammaM"
+        ],
+        "lexicographic_root_index": 1
+      }
+    },
+    "P_prime": {
+      "node": "p45",
+      "at": [
+        0.5384615384615385,
+        -1.1512791959304436
+      ],
+      "available_after": 9,
+      "witness": {
+        "objects": [
+          "GammaN",
+          "GammaM"
+        ],
+        "lexicographic_root_index": 0
+      }
+    }
+  },
+  "events": [
+    {
+      "e_move": 1,
+      "id": "GammaA",
+      "op": "circle",
+      "references": [
+        "A",
+        "B"
+      ],
+      "geometry": {
+        "center": [
+          -3.0,
+          0.0
+        ],
+        "radius": 3.0
+      }
+    },
+    {
+      "e_move": 2,
+      "id": "GammaB",
+      "op": "circle",
+      "references": [
+        "B",
+        "C"
+      ],
+      "geometry": {
+        "center": [
+          0.0,
+          0.0
+        ],
+        "radius": 1.0
+      }
+    },
+    {
+      "e_move": 3,
+      "id": "GammaR",
+      "op": "circle",
+      "references": [
+        "C",
+        "D"
+      ],
+      "geometry": {
+        "center": [
+          1.0,
+          0.0
+        ],
+        "radius": 2.5
+      }
+    },
+    {
+      "e_move": 4,
+      "id": "HE",
+      "op": "line",
+      "references": [
+        "H",
+        "E"
+      ],
+      "geometry": {
+        "a": 1.0,
+        "b": 0.8451542547285167,
+        "c": 1.0
+      }
+    },
+    {
+      "e_move": 5,
+      "id": "KG",
+      "op": "line",
+      "references": [
+        "K",
+        "G"
+      ],
+      "geometry": {
+        "a": 1.0,
+        "b": 1.6903085094570334,
+        "c": -1.5
+      }
+    },
+    {
+      "e_move": 6,
+      "id": "CT",
+      "op": "line",
+      "references": [
+        "C",
+        "T"
+      ],
+      "geometry": {
+        "a": 1.0,
+        "b": 0.1690308509457033,
+        "c": -1.0
+      }
+    },
+    {
+      "e_move": 7,
+      "id": "GR",
+      "op": "line",
+      "references": [
+        "G",
+        "R"
+      ],
+      "geometry": {
+        "a": 1.0,
+        "b": -0.50709255283711,
+        "c": 0.6666666666666667
+      }
+    },
+    {
+      "e_move": 8,
+      "id": "GammaM",
+      "op": "circle",
+      "references": [
+        "M",
+        "B"
+      ],
+      "geometry": {
+        "center": [
+          1.5,
+          0.0
+        ],
+        "radius": 1.5
+      }
+    },
+    {
+      "e_move": 9,
+      "id": "GammaN",
+      "op": "circle",
+      "references": [
+        "N",
+        "C"
+      ],
+      "geometry": {
+        "center": [
+          -0.6666666666666667,
+          0.0
+        ],
+        "radius": 1.6666666666666665
+      }
+    }
+  ],
+  "targets": [
+    "P",
+    "P_prime"
+  ]
+}

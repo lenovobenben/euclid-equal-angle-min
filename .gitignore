@@ -4,5 +4,8 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 animations/**/media/
+!animations/e9/media/
+animations/e9/media/*
+!animations/e9/media/E9EqualAngle_4k60.mp4
 experiments/results/tmp/
 *.log

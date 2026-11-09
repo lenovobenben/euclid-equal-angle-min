@@ -13,12 +13,26 @@ $$
 本项目研究存在性与最少尺规步数，提供逐笔构造、一般参数与覆盖证明、精确重放和有界搜索。
 **当前通用上界为 9 E，已证明一般下界为 6 E；尚未证明九笔最短。**
 
-[九笔构造与证明](docs/NINE.md) · [存在性](docs/EXISTENCE.md) ·
+[观看九笔双解动画](https://raw.githubusercontent.com/lenovobenben/euclid-equal-angle-min/main/animations/e9/media/E9EqualAngle_4k60.mp4) · [九笔构造与证明](docs/NINE.md) · [存在性](docs/EXISTENCE.md) ·
 [精确重放](experiments/results/nine-replay.json) · [一般下界](docs/LOWER_BOUND.md)
 
-![共线四点等视角示意：间距为 3、1、2 时的两个镜像解](docs/assets/equal-angle.svg)
+[![九笔等视角构造的两个镜像解 P、P′](animations/e9/preview.png)](https://raw.githubusercontent.com/lenovobenben/euclid-equal-angle-min/main/animations/e9/media/E9EqualAngle_4k60.mp4)
 
-图为 AB=3、BC=1、CD=2 的实例，示意图不计入作图步骤。Manim 动画后续补充。
+*点击预览图查看或下载动画，3840 × 2160，60 fps，51.7 秒。*
+
+## 先看演示
+
+动画从四个输入点及其完整直线开始，逐笔执行 **4 条直线 + 5 个圆 = 9 E**，
+展示共享交点 T 的复用，并在第 9 E 同时得到两个镜像解 P、P′。
+演示夹具为 `AB=3、BC=1、CD=5/2`，使用共享辅助圆的一般分支。
+完整有解域的覆盖由重新标号、九笔分支及相等间距分支共同保证。
+
+沿用 Euclid-CCC-Min 的深色细线风格，洋红表示免费输入，金色表示当前落笔，
+淡蓝表示辅助对象，绿色表示目标。每次落笔前标出已有定位点，画圆时临时显示半径。
+几何数据由 SageMath 精确重放导出，Manim 读取显示坐标。结尾连线和等角弧单独标为结果示意。
+
+源码、导出与渲染命令见 [动画说明](animations/e9/README.md)，逐笔安排见
+[分镜](animations/e9/STORYBOARD.md)。另有间距为 3、1、2 的[静态示意](docs/assets/equal-angle.svg)。
 
 ## 当前已验证上界
 
