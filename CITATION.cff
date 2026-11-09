@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "请引用本项目并注明所用提交或版本。"
+title: "Euclid-Equal-Angle-Min：可验证的尺规作图步数优化"
+type: software
+authors:
+  - alias: "lenovobenben"
+repository-code: "https://github.com/lenovobenben/euclid-equal-angle-min"
+url: "https://github.com/lenovobenben/euclid-equal-angle-min"
+abstract: >-
+  Equal viewing angles from four collinear points: verified full-domain 9 E upper bounds, a generic 6 E lower bound, exact replay, and bounded searches.
+keywords:
+  - straightedge-and-compass construction
+  - Euclidean construction
+  - E-move optimization
+  - exact verification
+  - SageMath

@@ -1,5 +1,7 @@
 # 研究脚本
 
+跨平台固定 Docker 复现与原有 Windows PowerShell 兼容入口见 [REPRODUCING](../docs/REPRODUCING.md)。下文已有 PowerShell 命令继续保留为兼容路径。
+
 已有 [verify_existence.sage.py](verify_existence.sage.py)，用 SageMath 核验存在性公式、距离比、行列式和对称退化，并补充整数夹具检查。复现命令与证明见 [EXISTENCE](../docs/EXISTENCE.md)。其余实验按以下前缀组织：
 
 原作图验证入口为 [verify-original.ps1](verify-original.ps1)。它调用 [verify_original_symbolic.py](verify_original_symbolic.py) 和 [replay_original.py](replay_original.py)，使用 [exact_geometry.py](exact_geometry.py) 的精确 AA 几何；完成恒等式核验、交点闭包重放、依赖与 E 台账、异常分类和回归测试，详见 [BASELINE](../docs/BASELINE.md)。

@@ -1,5 +1,7 @@
 # 验证测试
 
+跨平台固定 Docker 复现与原有 Windows PowerShell 兼容入口见 [REPRODUCING](../docs/REPRODUCING.md)。下文已有 PowerShell 命令继续保留为兼容路径。
+
 已有 [test_original_replay.py](test_original_replay.py)，9 项测试覆盖精确几何控制、目标不注入、非法动作、重复绘制计费、正常重放、异常限制与无解输入。测试依赖 SageMath，使用 `pwsh -NoProfile -File experiments/verify-original.ps1` 统一复现。
 
 [test_nine_replay.py](test_nine_replay.py) 新增 5 项测试，核验反向标号后的原目标、共享平行方向、旧限制输入、一般相等间距分支、有理数输入及数值筛查阳性控制。`pwsh -NoProfile -File experiments/verify-nine.ps1` 运行全部 14 项测试。

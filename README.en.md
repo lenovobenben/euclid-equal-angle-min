@@ -1,97 +1,167 @@
-# Euclid-Equal-Angle-Min
+# Euclid-Equal-Angle-Min · Equal Viewing Angles from Four Collinear Points
 
-**Shortest straightedge-and-compass constructions for four collinear points with equal viewing angles** · [简体中文](README.md)
+[简体中文](README.md) · **English**
 
-Given four distinct points A, B, C, D in that order on a line, construct an off-line point P such that
+**Construct both mirror solutions in at most 9 E; the main branch uses 4 lines and 5 circles.**
+
+Given A, B, C, D in order on a line, construct an off-line point P satisfying
 
 $$
 \angle APB=\angle BPC=\angle CPD.
 $$
 
-This project studies existence and the fewest elementary drawing moves needed, for either one solution in a specified half-plane or both mirror solutions.
+This project studies existence and minimum construction cost, with elementary traces,
+general-parameter and coverage proofs, exact replays, and bounded searches.
+**The full-domain upper bound is 9 E and the proved generic lower bound is 6 E.
+Nine-move minimality remains open.**
+
+[Nine-move construction](docs/NINE.md) · [Existence](docs/EXISTENCE.md) ·
+[Exact replay](experiments/results/nine-replay.json) · [Generic lower bound](docs/LOWER_BOUND.md)
 
 ![Equal-angle example with consecutive lengths 3, 1, 2 and two mirror solutions](docs/assets/equal-angle.svg)
 
-## Results
+The illustration is not a charged construction trace. Manim animations will be added later.
+Detailed mathematical documents are currently in Chinese.
 
-Write AB=a, BC=b, CD=c, with positive lengths. Solutions exist exactly when
+## Current verified upper bounds
+
+| Target | Main-branch lines | Main-branch circles | Generic `gen` | Full-domain `rob` |
+|---|---:|---:|---:|---:|
+| One solution in a specified half-plane `EA-ONE` | 4 | 5 | **9 E** | **9 E** |
+| Both mirror solutions `EA-ALL` | 4 | 5 | **9 E** | **9 E** |
+
+The nine-move program obtains both solutions and bounds both targets; it does not prove
+that their optimal scores coincide. Equal-gap branches can be shorter. The robust score
+is the worst actual cost over the proved branch partition.
+`gen` covers a relatively open, dense, full-measure subset; `rob` covers every solvable input.
+
+The **proved generic lower bound is 6 E** for either target, leaving both the generic optimum
+and the full-domain worst-case optimum in **6–9 E**. This is not a pointwise lower bound for
+special ratios. See [LOWER_BOUND](docs/LOWER_BOUND.md).
+The 10 E original construction covers only a restricted domain, while 7 E / 2 E results
+apply to specified special families: [BASELINE](docs/BASELINE.md), [REFINEMENTS](docs/REFINEMENTS.md).
+
+### Free inputs and the solvable domain
+
+The four ordered collinear points and their complete line are free. For AB=a, BC=b, CD=c>0,
+solutions exist exactly when
 
 $$
 \Delta=3ac-b(a+b+c)>0,
 $$
 
-equivalently $(a+b)(b+c)<4ac$. There is then exactly one solution in each half-plane.
+equivalently (a+b)(b+c)<4ac. There is then exactly one solution in each half-plane.
+Failure of an auxiliary construction on a solvable input requires relabeling or a proved
+alternative branch; it does not justify shrinking the original domain. See [EXISTENCE](docs/EXISTENCE.md).
 
-As of **2026-11-09**:
+## What counts as an E move
 
-| Result | Scope and evidence |
-|---|---|
-| **9 E upper bound** | Covers every solvable input and constructs both solutions. The main branch draws four lines and five circles. [Construction and proof](docs/NINE.md) |
-| **6 E generic lower bound** | A function-field argument and exact finite enumeration exclude all programs of at most five draws on generic inputs. [Computer-assisted proof](docs/LOWER_BOUND.md) |
-| 10 E original baseline | Exactly replayed, but subject to additional length restrictions. [Audit](docs/BASELINE.md) |
-| 7 E / 2 E special families | Seven moves for certain equal-length families; exactly two moves on two specified product-condition families. [Conditions and proofs](docs/REFINEMENTS.md) |
+| Operation | Cost |
+|---|---:|
+| Draw a complete line through two existing distinct points | 1 E |
+| Draw a circle centered at an existing point through another existing point | 1 E |
+| Obtain or name a determined finite real intersection | 0 E |
+| Four ordered collinear points and their complete line | 0 E |
+| Execute the same draw again | Still 1 E |
 
-**The generic optimum and the optimum worst-case cost over all solvable inputs are currently bounded by 6–9 E.** The next goal is a general eight-move construction. Nine-move minimality is open; the generic lower bound does not apply to every special input.
+Use an unmarked straightedge and a **collapsing compass**. Arbitrary auxiliary points,
+points at infinity, and free distance transfer are forbidden. All finite real intersections
+of each new object with existing distinct objects enter the point set automatically.
+Composite operations must be expanded. Draws used for branch tests, failed attempts,
+and duplicate draws count; referencing an existing object does not add E.
 
-The research priority is full-domain coverage and worst-case branch cost. Failure of an auxiliary construction must be handled by another branch when the original problem remains solvable.
+The elementary semantics follow Euclid-Min's fixed-version [metrics](https://github.com/lenovobenben/euclid-min/blob/792619b38d749643bc9d80da8110dc9cff5b4877/docs/METRICS.md) and
+[formal model](https://github.com/lenovobenben/euclid-min/blob/792619b38d749643bc9d80da8110dc9cff5b4877/docs/FORMAL_MODEL.md). This project's inputs, targets, and coverage are defined in
+[DESIGN](docs/DESIGN.md). Scores for different problems are not directly comparable.
 
-## Move model
+## Sources and project contribution
 
-The four points and their complete line are free inputs.
+Two original ai-math-notes conversations are preserved in [sources](sources/README.md).
+The problem also appears as Problem 9 of the 1994 Austrian–Polish Mathematical Competition;
+see [LITERATURE](docs/LITERATURE.md). This project independently proves existence,
+audits the restricted 10 E original construction, shares an intersection to remove one circle,
+proves nine-move coverage, and supplies special families and the computer-assisted generic lower bound.
+Archived sources remain unchanged. No literature-minimum or world-record claim is made.
 
-- A line through two existing distinct points: **1 E**.
-- A circle centered at an existing point through another existing point: **1 E**.
-- All finite real intersections of existing objects: **0 E**.
+## Exact verification
 
-Use an unmarked straightedge and a collapsible compass. Arbitrary auxiliary points and free radius transfer are unavailable. Midpoints, perpendiculars and parallels must be expanded into elementary draws. Repeated draws, branch tests requiring geometry, and failed attempts count.
+| Check | Result or purpose | Record |
+|---|---|---|
+| Existence | Eight identities and 3,375 integer fixtures | [Report](experiments/results/existence-verification.json) |
+| Full-domain 9 E | 14 identities, 21 replay fixtures, separate branch proof | [Identities](experiments/results/nine-symbolic-verification.json), [replay](experiments/results/nine-replay.json) |
+| Special families and regression | Ten identities, 29 fixtures, 19 regression checks | [Identities](experiments/results/refined-symbolic-verification.json), [replay](experiments/results/refined-replay.json) |
+| Generic 6 E lower bound | 192 seeds, 3,600 field, 1,680 center, and 840 denominator-unit checks | [Report](experiments/results/short-carrier-obstruction.json) |
 
-Track `EA-ONE` and `EA-ALL` separately, with generic (`gen`) and full-domain (`rob`) coverage. See [DESIGN](docs/DESIGN.md).
+Replays use exact SageMath QQ/AA arithmetic, automatic intersection closure, and dependency ledgers.
+Finite fixtures do not replace general identities or coverage proofs. The lower bound combines
+an exhaustive classification with exact elimination; it is not inferred from heuristic search misses.
+Floating screens discover candidates and do not certify mathematical correctness.
 
-## Reproduce
+## Reproduction
 
-Requirements: **Git, Docker and PowerShell 7**. Reports were generated with **SageMath 10.7**; numeric screens also use NumPy.
+Use SageMath 10.7. On macOS/Linux, the pinned image runs with no network and a read-only mount:
 
-```powershell
-git clone https://github.com/lenovobenben/euclid-equal-angle-min.git
-cd euclid-equal-angle-min
-
-# Skip if a container named sage is already running.
-docker run -d --name sage sagemath/sagemath:latest sleep infinity
-
-pwsh -NoProfile -File experiments/verify-nine.ps1
-pwsh -NoProfile -File experiments/verify-refined.ps1
-pwsh -NoProfile -File experiments/verify-lower-bound.ps1
+```sh
+docker run --rm --network none \
+  -v "$PWD:/workspace:ro" -w /workspace \
+  -e PYTHONDONTWRITEBYTECODE=1 \
+  sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528 \
+  sage -python experiments/verify_nine_symbolic.py
 ```
 
-Scripts copy their dependencies into the running container and write reports to `experiments/results/`. Use `-Container` to select another container. The `latest` image can change; check the SageMath version in each report.
+Run all 19 regression checks with the same image:
 
-The nine-move verifier checks 14 identities and 21 classified replay fixtures. The refinement verifier checks 10 further identities, 29 fixtures and all 19 regression tests. The lower-bound verifier checks 192 seed configurations, 3,600 field conditions, 1,680 center conditions and 840 denominator-unit conditions.
+```sh
+docker run --rm --network none \
+  -v "$PWD:/workspace:ro" -w /workspace \
+  -e PYTHONDONTWRITEBYTECODE=1 \
+  sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528 \
+  sage -python -m unittest discover -s tests -v
+```
 
-Finite fixtures do not replace domain proofs. Floating screens discover candidates; exact replay, symbolic identities and branch coverage certify constructions. Search failures alone do not prove lower bounds.
+With the image cached, no persistent container is required. See [complete instructions](docs/REPRODUCING.md)
+for exact replay, refinements, the lower bound, report regeneration, and existing Windows PowerShell 7
+wrappers. PowerShell is not a prerequisite on every platform; the pinned path is distinguished from
+older latest-based commands.
 
-## Read the research
+## Current research directions
 
-Detailed proofs are in Chinese:
+Prioritize a **9→8 E** improvement over the entire solvable domain. A generic result is recorded
+separately and needs robust repairs; special 7 E / 2 E families do not improve the general score.
+New experiments specify state, target, domain, budget, and stopping conditions.
+Future animation consumes verified geometry only. See [ROADMAP](docs/ROADMAP.md) and [SEARCH_LOG](docs/SEARCH_LOG.md).
 
-- [Existence and uniqueness](docs/EXISTENCE.md), [problem statements](docs/PROBLEMS.md).
-- [Nine-move construction](docs/NINE.md), [six-move lower bound](docs/LOWER_BOUND.md).
-- [Special families](docs/REFINEMENTS.md), [original construction](docs/BASELINE.md).
-- [Inversions, a third target locus and Möbius fixed points](docs/PROJECTIVITY.md).
-- [Research log](docs/RESEARCH_LOG.md), [bounded search records](docs/SEARCH_LOG.md), [roadmap](docs/ROADMAP.md).
-- [Sources and literature](docs/LITERATURE.md).
+## Documentation and code
 
-`docs/` holds proofs and research records; `sources/` preserves original snapshots; `experiments/` contains symbolic verification, exact replays and numeric screens; `tests/` contains regression tests. `animations/` is reserved for future presentation work.
+| Content | Entry |
+|---|---|
+| Inputs, targets, and claim levels | [DESIGN](docs/DESIGN.md) |
+| Problem statements and existence | [EXISTENCE](docs/EXISTENCE.md) |
+| Nine-move construction | [NINE](docs/NINE.md) |
+| Generic lower bound | [LOWER_BOUND](docs/LOWER_BOUND.md) |
+| Special families | [REFINEMENTS](docs/REFINEMENTS.md) |
+| Inversion and projectivity | [PROJECTIVITY](docs/PROJECTIVITY.md) |
+| Full reproduction commands | [REPRODUCING](docs/REPRODUCING.md) |
+| Bounded searches already performed | [SEARCH_LOG](docs/SEARCH_LOG.md) |
+| Research and animation plans | [ROADMAP](docs/ROADMAP.md) |
+| Sources and archived material | [LITERATURE](docs/LITERATURE.md) |
+| Research scripts | [experiments](experiments/README.md) |
+| Certificates and reports | [experiments/results](experiments/results/README.md) |
+| Regression checks | [tests](tests/README.md) |
+| Series conventions and four-project comparison | [SERIES](docs/SERIES.md) |
 
-## Construction optimization series
+**Construction optimization series**:
+[Euclid-Min](https://github.com/lenovobenben/euclid-min) ·
+[Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min) ·
+[Euclid-Equal-Angle-Min](https://github.com/lenovobenben/euclid-equal-angle-min) ·
+[Euclid-Castillon-Min](https://github.com/lenovobenben/euclid-castillon-min).
 
-This is the third project in the series:
 
-1. [Euclid-Min](https://github.com/lenovobenben/euclid-min): the regular 17-gon.
-2. [Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min): the Apollonius three-circle problem.
-3. [Euclid-Equal-Angle-Min](https://github.com/lenovobenben/euclid-equal-angle-min): four collinear points with equal viewing angles.
+## License and citation
 
-The problem also appears as Problem 9 of the 1994 Austrian–Polish Mathematical Competition. No claim of a literature minimum or world record is made.
-
-## License
-
-Original code: [Apache 2.0](LICENSE). Original documentation and research data: [CC BY 4.0](LICENSE-CONTENT). Archived source material retains its source rights; see [license scope](LICENSE-SCOPE.md).
+Code, tests, and configuration use [Apache 2.0](LICENSE). Mathematical documentation,
+construction records, research data, and citation metadata use [CC BY 4.0](LICENSE-CONTENT).
+Third-party rights are unchanged; see the [license scope](LICENSE-SCOPE.md).
+Use [CITATION.cff](CITATION.cff), citing **lenovobenben, Euclid-Equal-Angle-Min**, the
+[repository](https://github.com/lenovobenben/euclid-equal-angle-min), and the commit or version used.
+Indicate modifications when adapting non-software content.

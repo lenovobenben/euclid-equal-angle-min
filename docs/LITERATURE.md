@@ -16,7 +16,7 @@
 
 ## 2. 项目结构参考
 
-Euclid-CCC-Min，本地 `D:/code/euclid-ccc-min`，本次参考提交 `35982169e4e4c7e2004d3d03305188d426cb79d5`。
+Euclid-CCC-Min，固定参考提交 [3598216](https://github.com/lenovobenben/euclid-ccc-min/tree/35982169e4e4c7e2004d3d03305188d426cb79d5)。
 
 沿用文档、实验、测试和动画分层，以及一般位置 / 全域覆盖、精确重放和上界 / 下界分开记录的方法。不复制其三圆参数、目标或现有研究成绩。
 
