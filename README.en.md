@@ -45,15 +45,13 @@ Video captions and detailed mathematical documents are currently in Chinese.
 
 | Target | Main-branch lines | Main-branch circles | Generic `gen` | Full-domain `rob` |
 |---|---:|---:|---:|---:|
-| One solution in a specified half-plane `EA-ONE` | 4 | 5 | **9 E** | **9 E** |
 | Both mirror solutions `EA-ALL` | 4 | 5 | **9 E** | **9 E** |
 
-The nine-move program obtains both solutions and bounds both targets; it does not prove
-that their optimal scores coincide. Equal-gap branches can be shorter. The robust score
+Equal-gap branches can be shorter. The robust score
 is the worst actual cost over the proved branch partition.
 `gen` covers a relatively open, dense, full-measure subset; `rob` covers every solvable input.
 
-The **proved generic lower bound is 6 E** for either target, leaving both the generic optimum
+The **proved generic lower bound is 6 E** for both mirror solutions, leaving the generic optimum
 and the full-domain worst-case optimum in **6–9 E**. This is not a pointwise lower bound for
 special ratios. See [LOWER_BOUND](docs/LOWER_BOUND.md).
 The 10 E original construction covers only a restricted domain, while 7 E / 2 E results
