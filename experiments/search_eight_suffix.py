@@ -1,6 +1,8 @@
 """8 E candidate screen after a verified five-draw first-locus prefix.
 
-Prefix: GammaA, GammaB, HE, KG, GammaM. Enumerate a first auxiliary,
+The default prefix is GammaA, GammaB, HE, KG, GammaM. Alternative circle-secant
+and reflected-circles prefixes expose different free intersections at E5.
+Enumerate a first auxiliary,
 a second auxiliary and a final line/circle through a target. Floating evidence
 only; all root-count mismatches are skipped and all hits need exact replay.
 """
@@ -10,11 +12,12 @@ import json
 from pathlib import Path
 from time import monotonic
 from math import sqrt
-from search_shared_centers import FIXTURES, available, candidates, describe, extend, fresh, finisher_candidates, obj
+from search_shared_centers import FIXTURES, available, candidates, describe, extend, fresh, finisher_candidates, near, obj, roots
+from search_four_line_core import REGIONS
 
 
-def fixture_ratios(family='generic'):
-    ratios=[(a/b,c/b) for a,b,c in FIXTURES]
+def fixture_ratios(family='generic',fixtures=None):
+    ratios=[(a/b,c/b) for a,b,c in (FIXTURES if fixtures is None else fixtures)]
     if family!='generic':
         outer=[37/19,41/23,53/31,29/17]
         ratios=[(a,a if family=='equal-outer' else 1. if family=='equal-neighbor' else 1+1/a)
@@ -22,8 +25,8 @@ def fixture_ratios(family='generic'):
     return ratios
 
 
-def initial_state(stats,family='generic'):
-    ratios=fixture_ratios(family)
+def initial_state(stats,family='generic',prefix_mode='original',fixtures=None):
+    ratios=fixture_ratios(family,fixtures)
     points={'A':tuple((-a,0.) for a,c in ratios),'B':tuple((0.,0.) for a,c in ratios),
             'C':tuple((1.,0.) for a,c in ratios),'D':tuple((1.+c,0.) for a,c in ratios)}
     objects=[('l',tuple(('line',(0.,1.,0.)) for _ in ratios))]
@@ -37,14 +40,35 @@ def initial_state(stats,family='generic'):
                 points[name]=bundle
                 return
         raise AssertionError('oracle point not present:'+name)
-    draw('circle','A','B','GammaA')
-    draw('circle','B','C','GammaB')
-    bind('E',tuple((-1.,0.) for a,c in ratios))
-    bind('G',tuple((-1/(2*a),sqrt(4*a*a-1)/(2*a)) for a,c in ratios))
-    bind('H',tuple((-1/(2*a),-sqrt(4*a*a-1)/(2*a)) for a,c in ratios))
-    draw('line','H','E','HE')
-    bind('K',tuple((-a-.5,sqrt(4*a*a-1)/2) for a,c in ratios))
-    draw('line','K','G','KG')
+    if prefix_mode=='reflected-circles':
+        if not all(a>1.5 for a,c in ratios):
+            raise ValueError('reflected-circles requires a>3b/2 on every fixture')
+        draw('circle','B','A','GammaA')
+        draw('circle','C','B','GammaB')
+        bind('X',tuple((a,0.) for a,c in ratios))
+        draw('circle','X','C','Omega')
+        omega=dict(objects)['Omega']
+        seed=dict(objects)['GammaB']
+        bind('U',tuple(next(p for p in roots(first,second) if p[1]>0)
+                       for first,second in zip(omega,seed)))
+        draw('circle','U','C','Sigma')
+    else:
+        draw('circle','A','B','GammaA')
+        draw('circle','B','C','GammaB')
+        bind('E',tuple((-1.,0.) for a,c in ratios))
+        bind('G',tuple((-1/(2*a),sqrt(4*a*a-1)/(2*a)) for a,c in ratios))
+        if prefix_mode=='circle-secant':
+            draw('circle','G','E','Omega')
+            omega=dict(objects)['Omega']
+            seed=dict(objects)['GammaB']
+            bind('Q',tuple(next(p for p in roots(first,second) if not near(p,e))
+                           for first,second,e in zip(omega,seed,points['E'])))
+            draw('line','G','Q','GQ')
+        else:
+            bind('H',tuple((-1/(2*a),-sqrt(4*a*a-1)/(2*a)) for a,c in ratios))
+            draw('line','H','E','HE')
+            bind('K',tuple((-a-.5,sqrt(4*a*a-1)/2) for a,c in ratios))
+            draw('line','K','G','KG')
     bind('M',tuple((a/(a-1),0.) for a,c in ratios))
     draw('circle','M','B','GammaM')
     # Remove point aliases to keep the candidate enumeration small.
@@ -61,10 +85,10 @@ def initial_state(stats,family='generic'):
     return unique,objects,targets,aliases
 
 
-def search(seconds,first_mode,start_index,tail_budget=3,family='generic'):
+def search(seconds,first_mode,start_index,tail_budget=3,family='generic',prefix_mode='original',fixtures=None):
     start=monotonic();deadline=start+seconds
     stats={'first_objects':0,'second_objects':0,'finishers':0,'mismatched_root_counts':0}
-    points,objects,targets,aliases=initial_state(stats,family)
+    points,objects,targets,aliases=initial_state(stats,family,prefix_mode,fixtures)
     if first_mode=='right-circle':
         p,q=aliases['C'],aliases['D']
         firsts=[('circle',p,q,tuple(obj('circle',x,y) for x,y in zip(points[p],points[q])))]
@@ -113,15 +137,19 @@ if __name__=='__main__':
     parser.add_argument('--tail-budget',type=int,choices=(2,3),default=3)
     parser.add_argument('--family',choices=('generic','equal-outer','equal-neighbor','radius-coincidence'),default='generic')
     parser.add_argument('--oriented',action='store_true',help='Use max(a,c) on the left, with four distinct ratio fixtures')
+    parser.add_argument('--prefix',choices=('original','circle-secant','reflected-circles'),default='original')
+    parser.add_argument('--region',choices=tuple(REGIONS))
     parser.add_argument('--output',type=Path)
     args=parser.parse_args()
+    fixtures=REGIONS[args.region] if args.region else FIXTURES
     if args.oriented:
-        FIXTURES=tuple(dict.fromkeys((max(a,c),b,min(a,c)) for a,b,c in FIXTURES))+((59,41,37),)
-    result=search(args.seconds,args.first,args.start_index,args.tail_budget,args.family)
-    result.update({'fixtures':FIXTURES,'first_mode':args.first,'start_index':args.start_index,
+        fixtures=tuple(dict.fromkeys((max(a,c),b,min(a,c)) for a,b,c in fixtures))+((59,41,37),)
+    result=search(args.seconds,args.first,args.start_index,args.tail_budget,args.family,args.prefix,fixtures)
+    result.update({'fixtures':fixtures,'first_mode':args.first,'start_index':args.start_index,
                    'family':args.family,'tail_budget':args.tail_budget,
+                   'prefix_mode':args.prefix,'region':args.region,'seconds_budget':args.seconds,
                    'oriented':args.oriented,
-                   'normalized_lengths':[[a,1.,c] for a,c in fixture_ratios(args.family)],
+                   'normalized_lengths':[[a,1.,c] for a,c in fixture_ratios(args.family,fixtures)],
                    'scope':'5E first-locus prefix plus bounded tail; floating prefilter; family changes fixture ratios as documented'})
     if args.output:args.output.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,indent=2))

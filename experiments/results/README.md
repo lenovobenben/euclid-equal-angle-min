@@ -19,3 +19,10 @@
 [short-carrier-obstruction.json](short-carrier-obstruction.json) 是一般六笔下界的有限精确符号部分：192 种种子、3600 项域检查、1680 项圆心余式检查、840 项 k 单位检查。其完整性与推论见 [LOWER_BOUND](../../docs/LOWER_BOUND.md)，复现 `experiments/verify-lower-bound.ps1`。
 
 [projectivity-symbolic.json](projectivity-symbolic.json) 保存 20 项结构恒等式。`dynamic-*.json`、`output-first-*.json`、`alternative-locus-*.json`、`four-line-*.json`、`four-core-*.json` 及两个 `*field*` / `*discriminant*` 筛查保留第三轮的范围限定结果；零命中不承担六笔下界的证明责任。
+
+第四轮的 `simultaneous-*.json`、`early-locus-*.json`、`eight-circle-secant-*.json` 和
+`eight-reflected-circles-*.json` 保存末圆同时定心与替代五笔前缀的有界筛查。
+报告区分起始组合扫描完成、单个尾部限时未完成及总预算停止。
+[early-loci-exact-audit.json](early-loci-exact-audit.json) 保存 11 项一般参数恒等式及
+102 个 QQ/AA 固定实例重放，只认证第一目标载体的五笔前缀。
+本轮未产生完整八笔构造，正式上界仍为 9 E，范围与命令见 [SEARCH_LOG](../../docs/SEARCH_LOG.md)。

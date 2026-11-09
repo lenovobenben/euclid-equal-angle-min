@@ -1,0 +1,442 @@
+{
+  "status": "locus_budget_exhausted",
+  "region": "all",
+  "fixtures": [
+    [
+      43,
+      19,
+      37
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      53,
+      31,
+      29
+    ],
+    [
+      59,
+      41,
+      37
+    ]
+  ],
+  "normalized_lengths": [
+    [
+      2.263157894736842,
+      1.9473684210526316
+    ],
+    [
+      1.7826086956521738,
+      1.3478260869565217
+    ],
+    [
+      1.7096774193548387,
+      0.9354838709677419
+    ],
+    [
+      1.4390243902439024,
+      0.9024390243902439
+    ]
+  ],
+  "start_prefix": 0,
+  "repeat_cursor": {
+    "prefix": 59,
+    "third": 74,
+    "fourth": 21
+  },
+  "seconds_budget": 120.0,
+  "tail_seconds_budget_per_locus": 8.0,
+  "max_loci": 12,
+  "elapsed": 100.19572723199963,
+  "stats": {
+    "prefixes": 60,
+    "third_objects": 2531,
+    "fourth_witness_objects": 12,
+    "first_loci": 12,
+    "sixth_objects": 4099,
+    "seventh_witness_objects": 1276,
+    "final_carriers": 0,
+    "mismatched_root_counts": 6385,
+    "virtual_mismatched_roots": 125233
+  },
+  "loci_observed": [
+    {
+      "prefix": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "core": [
+        [
+          "line",
+          "c1&l:0",
+          "c1&c0:0"
+        ],
+        [
+          "line",
+          "c1&c0:1",
+          "s3&c0:0"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "B"
+      ],
+      "tail_status": "screen_completed_without_hit"
+    },
+    {
+      "prefix": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "core": [
+        [
+          "circle",
+          "c1&c0:0",
+          "c1&l:0"
+        ],
+        [
+          "line",
+          "c1&c0:0",
+          "s3&c1:1"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "B"
+      ],
+      "tail_status": "budget_exhausted"
+    },
+    {
+      "prefix": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "core": [
+        [
+          "line",
+          "c1&l:0",
+          "c1&c0:1"
+        ],
+        [
+          "line",
+          "c1&c0:0",
+          "s3&c0:0"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "B"
+      ],
+      "tail_status": "screen_completed_without_hit"
+    },
+    {
+      "prefix": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "core": [
+        [
+          "circle",
+          "c1&c0:1",
+          "c1&l:0"
+        ],
+        [
+          "line",
+          "c1&c0:1",
+          "s3&c1:1"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "B"
+      ],
+      "tail_status": "budget_exhausted"
+    },
+    {
+      "prefix": [
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "core": [
+        [
+          "line",
+          "c1&l:0",
+          "c1&c0:0"
+        ],
+        [
+          "line",
+          "c1&c0:1",
+          "s3&c0:0"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "C"
+      ],
+      "tail_status": "budget_exhausted"
+    },
+    {
+      "prefix": [
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "core": [
+        [
+          "circle",
+          "c1&c0:0",
+          "c1&l:0"
+        ],
+        [
+          "line",
+          "c1&c0:0",
+          "s3&c1:1"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "C"
+      ],
+      "tail_status": "budget_exhausted"
+    },
+    {
+      "prefix": [
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "core": [
+        [
+          "line",
+          "c1&l:0",
+          "c1&c0:1"
+        ],
+        [
+          "line",
+          "c1&c0:0",
+          "s3&c0:0"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "C"
+      ],
+      "tail_status": "budget_exhausted"
+    },
+    {
+      "prefix": [
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "core": [
+        [
+          "circle",
+          "c1&c0:1",
+          "c1&l:0"
+        ],
+        [
+          "line",
+          "c1&c0:1",
+          "s3&c1:1"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "C"
+      ],
+      "tail_status": "budget_exhausted"
+    },
+    {
+      "prefix": [
+        [
+          "C",
+          "B"
+        ],
+        [
+          "D",
+          "C"
+        ]
+      ],
+      "core": [
+        [
+          "line",
+          "c0&l:1",
+          "c1&c0:0"
+        ],
+        [
+          "line",
+          "c1&c0:1",
+          "s3&c1:1"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "C"
+      ],
+      "tail_status": "screen_completed_without_hit"
+    },
+    {
+      "prefix": [
+        [
+          "C",
+          "B"
+        ],
+        [
+          "D",
+          "C"
+        ]
+      ],
+      "core": [
+        [
+          "circle",
+          "c1&c0:0",
+          "c0&l:1"
+        ],
+        [
+          "line",
+          "c1&c0:0",
+          "s3&c0:0"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "C"
+      ],
+      "tail_status": "budget_exhausted"
+    },
+    {
+      "prefix": [
+        [
+          "C",
+          "B"
+        ],
+        [
+          "D",
+          "C"
+        ]
+      ],
+      "core": [
+        [
+          "line",
+          "c0&l:1",
+          "c1&c0:1"
+        ],
+        [
+          "line",
+          "c1&c0:0",
+          "s3&c1:1"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "C"
+      ],
+      "tail_status": "screen_completed_without_hit"
+    },
+    {
+      "prefix": [
+        [
+          "C",
+          "B"
+        ],
+        [
+          "D",
+          "C"
+        ]
+      ],
+      "core": [
+        [
+          "circle",
+          "c1&c0:1",
+          "c0&l:1"
+        ],
+        [
+          "line",
+          "c1&c0:1",
+          "s3&c0:0"
+        ]
+      ],
+      "locus": [
+        "circle",
+        "s4&l:0",
+        "C"
+      ],
+      "tail_status": "budget_exhausted"
+    }
+  ],
+  "initial": "four ordered collinear points and their complete line only",
+  "target": "EA-ONE or EA-ALL in <=8 E",
+  "scope": "2 input circles, arbitrary third object, witness-filtered fourth, first carrier at E5, arbitrary E6, witness-filtered E7, final carrier at E8; floating pilot only",
+  "limitations": [
+    "finite fixtures and lexicographic roots",
+    "root-count mismatches skipped",
+    "witnesses require an old circle center or old radius endpoint, or vertical carrier",
+    "both new supports and asymmetric carriers can be missed",
+    "per-locus tail budgets can leave tails incomplete",
+    "no lower bound"
+  ],
+  "positive_control": {
+    "known_five_draw_locus_retained": true,
+    "oracle_not_injected": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "status": "budget_exhausted",
+  "repeat_first_index": 172,
+  "stats": {
+    "first_objects": 137,
+    "second_objects": 143323,
+    "finishers": 0,
+    "mismatched_root_counts": 5159
+  },
+  "elapsed": 120.0007841480001,
+  "fixtures": [
+    [
+      47,
+      29,
+      37
+    ],
+    [
+      67,
+      41,
+      53
+    ],
+    [
+      79,
+      47,
+      61
+    ]
+  ],
+  "first_mode": "all",
+  "start_index": 0,
+  "family": "generic",
+  "tail_budget": 3,
+  "prefix_mode": "circle-secant",
+  "region": "chamber",
+  "seconds_budget": 120.0,
+  "oriented": false,
+  "normalized_lengths": [
+    [
+      1.6206896551724137,
+      1.0,
+      1.2758620689655173
+    ],
+    [
+      1.6341463414634145,
+      1.0,
+      1.2926829268292683
+    ],
+    [
+      1.6808510638297873,
+      1.0,
+      1.297872340425532
+    ]
+  ],
+  "scope": "5E first-locus prefix plus bounded tail; floating prefilter; family changes fixture ratios as documented"
+}

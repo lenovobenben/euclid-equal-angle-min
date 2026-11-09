@@ -14,6 +14,12 @@
 
 [verify_projectivity_symbolic.py](verify_projectivity_symbolic.py) 核验 20 项反演、第三轨迹和射影固定点恒等式。第三轮筛查为 `search_dynamic_prefix.py`、`search_output_first.py`、`search_alternative_locus.py`、`search_four_line_core.py` 及两个判别式脚本；预算、已完成范围和恢复索引均在 [SEARCH_LOG](../docs/SEARCH_LOG.md)。
 
+第四轮的 [search_simultaneous_centers.py](search_simultaneous_centers.py) 检查末圆同时定心，
+[search_early_locus.py](search_early_locus.py) 检查两圆起步的第五笔载体。
+`search_eight_suffix.py` 新增 `circle-secant`、`reflected-circles` 前缀，默认入口保持原行为。
+[audit_early_loci.py](audit_early_loci.py) 完成 11 项参数恒等式及 102 个固定实例的第一载体审计。
+本轮未找到完整八笔程序，适用域、预算、限制和恢复位置见 [SEARCH_LOG](../docs/SEARCH_LOG.md)。
+
 | 前缀 | 用途 |
 |---|---|
 | `verify_` | 存在性、恒等式、目标关系的精确核验 |

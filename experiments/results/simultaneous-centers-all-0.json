@@ -1,0 +1,73 @@
+{
+  "status": "screen_completed_without_hit",
+  "region": "all",
+  "fixtures": [
+    [
+      43,
+      19,
+      37
+    ],
+    [
+      41,
+      23,
+      31
+    ],
+    [
+      53,
+      31,
+      29
+    ],
+    [
+      59,
+      41,
+      37
+    ]
+  ],
+  "normalized_lengths": [
+    [
+      2.263157894736842,
+      1.9473684210526316
+    ],
+    [
+      1.7826086956521738,
+      1.3478260869565217
+    ],
+    [
+      1.7096774193548387,
+      0.9354838709677419
+    ],
+    [
+      1.4390243902439024,
+      0.9024390243902439
+    ]
+  ],
+  "start_prefix": 0,
+  "stop_prefix": null,
+  "repeat_prefix_index": 220,
+  "seconds_budget": 90.0,
+  "elapsed": 12.151621090000845,
+  "stats": {
+    "prefixes": 220,
+    "fourth_objects": 21226,
+    "fifth_witness_objects": 0,
+    "states_with_midpoint_support": 0,
+    "final_circles": 0,
+    "mismatched_root_counts": 4126,
+    "virtual_mismatched_roots": 72001
+  },
+  "initial": "four ordered collinear points and their complete line only",
+  "target": "EA-ALL via canonical M,N circles, total budget <=8 E",
+  "scope": "three input circles; arbitrary fourth object; witness-filtered fifth; both canonical centers first appear together on a final core circle; floating heuristic only",
+  "limitations": [
+    "root-count mismatches skipped",
+    "lexicographic roots bound across finite fixtures",
+    "no exhaustive general 8 E exclusion",
+    "all hits require exact replay and coverage proof"
+  ],
+  "positive_control": {
+    "new_center_witness_retained": true,
+    "simultaneous_circle_retained": true,
+    "both_points_created_by_intersection": true,
+    "oracle_not_injected": true
+  }
+}

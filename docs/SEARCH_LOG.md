@@ -170,3 +170,178 @@ docker exec sage sage -python /tmp/euclid-equal-angle-min-nine/experiments/searc
 ```
 
 未完成入口依次为：mixed 二圆四笔前缀 29、非标准第一载体前缀 53、near 提前目标圆前缀 28。下一轮是否继续这些筛查，需按新结构线索决定；不以重复计数扩大排除声明。
+
+## 2026-11-09：第四轮，末圆同时定心与五笔替代前缀
+
+本轮未找到完整的通用 8 E 程序，正式一般下界仍为 6 E，全域最坏上界仍为 9 E。
+新增两种第一目标圆的五笔前缀，完成参数恒等式与固定实例精确核验。
+数值筛查、前缀核验、完整目标生成及全域覆盖在以下分别记录。
+
+### 初态、目标与预算
+
+初态只有 A、B、C、D 及其完整直线，规则为 `collinear-four-equal-angle-e-v1`。
+搜索时令 b=1 仅用于数值坐标，不增加免费对象。
+目标为至多 8 E 产生原始等角解，标准两圆心路线同时追求两个解。
+
+沿用第三轮的 `all` 和 `chamber` 夹具，另用 `short-chamber`，取
+`(47,29,23)、(67,41,31)、(79,47,37)`。`chamber` 的三例均 c>b，
+`short-chamber` 的三例均 c<b。各报告保存实际精确整数输入及归一化显示值。
+运行环境为 SageMath 10.7，实际镜像 `sagemath/sagemath:latest` 对应固定摘要
+`sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528`。
+
+### 最后一只辅助圆同时首次产生 M、N
+
+设 M=(m,0)、N=(n,0)，在一般分支中
+
+\[
+m=\frac{ab}{a-b},\qquad n=\frac{b^2}{b-c},\qquad
+m-n=-\frac{b(ac-b^2)}{(a-b)(b-c)}\ne0.
+\]
+
+若圆心为 (u,v) 的一只圆通过 M、N，比较两点到圆心的距离平方得到
+
+\[
+u=\frac{m+n}{2},\qquad r^2=\frac{(m-n)^2}{4}+v^2.
+\]
+
+这允许圆心位于轴外。对第 6 笔为该圆的形状，第 5 笔若新提供圆心，
+它必须产生直线 x=(m+n)/2 与某个旧对象的交点。若圆心已可用、
+半径端点新出现，该端点必须是对应虚拟圆与旧对象的交点。
+这些虚拟点只过滤第 5 笔候选，不进入真实点集。最后实际画圆、求交，
+再检查两个圆心均成为可用点，末尾两个目标圆另计 2 E。
+
+[search_simultaneous_centers.py](../experiments/search_simultaneous_centers.py)
+补查此前联合定心筛查遗漏的“最后一圆同时首次产生两个圆心”形状。
+三圆模式允许任意第 4 笔，二圆模式允许任意第 3、4 笔。
+
+| 起始圆数与组 | 时间上限 | 起始组合观察 | 第 4 笔对象 | 结果与恢复点 |
+|---|---:|---:|---:|---|
+| 3 / all | 90 秒 | 220 | 21226 | 遍历到末尾，未命中 |
+| 3 / chamber | 90 秒 | 220 | 22792 | 遍历到末尾，未命中 |
+| 3 / short-chamber | 90 秒 | 220 | 22262 | 遍历到末尾，未命中 |
+| 2 / chamber | 120 秒 | 18，含末个未完成组合 | 89239 | 达到预算，重启组合 17 |
+
+这四组未筛出含新支持见证的第 5 笔，亦未发现可直接同时定心的圆。
+报告分别为 `simultaneous-centers-{all,chamber,short-chamber}-0.json` 和
+`simultaneous-two-seed-chamber-0.json`。
+跨夹具根数不一致仍被跳过，三圆模式的“遍历到末尾”只针对声明的浮点绑定形状。
+二圆模式剩余组合尚未遍历。
+
+阳性控制使用合法圆、直径线和割线，分别验证“新圆心”和“旧圆心加新半径端点”
+两类见证不会被过滤掉，并实际求交生成两个校准点。
+另有标量 / NumPy 过滤一致性及轴外圆心控制。
+
+### 两圆起步，第五笔画出第一目标载体
+
+[search_early_locus.py](../experiments/search_early_locus.py) 枚举两只输入圆、
+任意第三笔、见证过滤的第四笔及实际第五笔目标载体。
+随后允许任意第六笔、见证过滤的第七笔和实际第八笔目标载体。
+见证复用既有 `search_alternative_locus.py`，覆盖已知轴心圆心、已知半径端点
+或目标竖线的情况，仍可能漏掉两个支持点同时新出现或非对称载体。
+
+| 组 | 总时间 / 单前缀尾部预算 | 第一载体记录 | 尾部观察 | 完成情况 |
+|---|---|---:|---|---|
+| all | 120 秒 / 8 秒，最多 12 条前缀记录 | 12 | 4099 第六笔、1276 第七笔 | 达到前缀数量上限，4 个尾部遍历到末尾、8 个限时停止 |
+| chamber | 120 秒 / 4 秒，最多 24 条前缀记录 | 18 | 2637 第六笔、0 个过滤后的第七笔 | 两圆组合扫描到 66，18 个尾部均限时停止 |
+
+两组均未找到最终目标候选。报告为 `early-locus-all-0.json` 和
+`early-locus-chamber-0.json`。前者最后观察位置为组合 59、第三笔索引 74、
+第四笔见证索引 21，若从组合 59 重启会重复该组合已完成部分。
+后者的组合扫描已到末尾，但尾部搜索未完成，报告状态明确记为
+`prefix_scan_completed_with_incomplete_tails`。
+
+### 已核验的两种替代五笔前缀
+
+二者均得到现有第一目标圆 ΓM=Circle(M,B)，没有把原始目标点提前生成。
+采用 B=(0,0)、A=(-a,0)、C=(b,0)，m=ab/(a-b)。
+
+第一种适用于 a>b>0，免费反向标号后的整个有解域均满足这一条件。
+
+1. Circle(A,B)。
+2. Circle(B,C)，取上侧交点 G，并取第二圆与底线除 C 外的交点 E。
+3. Ω=Circle(G,E)。
+4. 取 Ω 与第二圆除 E 外的交点 Q，画 GQ，与底线交于 M。
+5. Circle(M,B)。
+
+令 h²=4a²-b²，可核验
+
+\[
+G=\left(-\frac{b^2}{2a},\frac{bh}{2a}\right),\qquad
+Q=\left(b-\frac{b^3}{2a^2},\frac{b^2h}{2a^2}\right).
+\]
+
+Q 同时位于 Ω 和第二圆，G、Q、M 共线。
+Qx-Gx=b(2a-b)(a+b)/(2a²)>0，且 Qx-Ex=b(4a²-b²)/(2a²)>0，
+所以支持点和第二交点的选择均合法。此处 Q 就是九笔程序中的共享点 T。
+前缀成本为 1 线、4 圆，区别于当前 2 线、3 圆的前缀。
+
+第二种适用于 a>3b/2，是有内部区域的受限路线。
+
+1. Circle(B,A)，与底线除 A 外的交点为 X。
+2. ΓC=Circle(C,B)。
+3. Ω=Circle(X,C)，取 Ω、ΓC 的上侧交点 U。
+4. Circle(U,C)，与底线除 C 外的交点为 M。
+5. Circle(M,B)。
+
+此时 X=(a,0)，且
+
+\[
+U_x=\frac{b(2a-b)}{2(a-b)},\qquad
+U_y^2=\frac{b^2(2a-3b)(2a-b)}{4(a-b)^2}>0.
+\]
+
+U 满足两只定义圆的方程，2Ux-b=m，所以第 4 笔确实生成 M。
+此五笔全部是圆。a>3b/2 是本路线的辅助条件，原问题在其补集仍可能有解。
+
+[audit_early_loci.py](../experiments/audit_early_loci.py) 验证以上 11 项一般参数恒等式，
+并用原 `OriginalReplay` 的 QQ/AA 自动交点闭包重放两份筛查报告。
+30 条前缀记录包含镜像、跨组重复，合计 **102 个固定实例**均通过，
+其中 46 个第一载体为标准 M 圆，56 个为标准 N 圆。
+每例恰执行五次动作，两个观察目标均位于第一载体上，目标点尚未成为交点。
+精确报告为 [early-loci-exact-audit.json](../experiments/results/early-loci-exact-audit.json)。
+
+### 两条新前缀的无见证限制收尾预筛
+
+给 [search_eight_suffix.py](../experiments/search_eight_suffix.py) 增加 `--prefix`
+与 `--region` 可选参数，默认行为保持原前缀及原夹具。
+对上述两种前缀分别允许任意第 6、7 笔，再过滤实际第 8 笔目标载体。
+这一阶段允许第 7 笔同时提供最后载体的两个新支持点，也允许非对称末载体，
+仍受有限样本、浮点容差和交点绑定限制。
+
+| 前缀 / 组 | 上限 | 第 6 笔观察 | 第 7 笔观察 | 结果 / 重启第 6 笔索引 |
+|---|---:|---:|---:|---|
+| circle-secant / chamber | 120 秒 | 137 | 143323 | 未命中，172 |
+| reflected-circles / chamber | 120 秒 | 158 | 158982 | 未命中，202 |
+
+报告为 `eight-circle-secant-chamber-0.json`、`eight-reflected-circles-chamber-0.json`。
+两段均未遍历到末尾，重复索引对应的未完成尾部需要整体重做。
+这些计数为实际观察次数，不声明互异程序数量或完整排除。
+
+### 复现与停止边界
+
+在仓库根目录执行，以下为本轮主要入口，其他组的选项及预算见上表。
+
+```powershell
+$researchSage = 'sagemath/sagemath@sha256:4f5589eb6c565949a006f8665de2876b8414410daf5ac554f4434a15d4f3d528'
+docker run --rm --network none -e PYTHONDONTWRITEBYTECODE=1 `
+  -v "${PWD}:/workspace" -w /workspace $researchSage `
+  sage -python experiments/search_simultaneous_centers.py --region chamber --seconds 90 `
+  --output experiments/results/simultaneous-centers-chamber-0.json
+docker run --rm --network none -e PYTHONDONTWRITEBYTECODE=1 `
+  -v "${PWD}:/workspace" -w /workspace $researchSage `
+  sage -python experiments/search_early_locus.py --region chamber --seconds 120 `
+  --tail-seconds 4 --max-loci 24 --output experiments/results/early-locus-chamber-0.json
+docker run --rm --network none -e PYTHONDONTWRITEBYTECODE=1 `
+  -v "${PWD}:/workspace" -w /workspace $researchSage `
+  sage -python experiments/search_eight_suffix.py --prefix circle-secant --region chamber `
+  --first all --seconds 120 --output experiments/results/eight-circle-secant-chamber-0.json
+docker run --rm --network none -e PYTHONDONTWRITEBYTECODE=1 `
+  -v "${PWD}:/workspace" -w /workspace $researchSage `
+  sage -python experiments/audit_early_loci.py experiments/results/early-locus-all-0.json `
+  experiments/results/early-locus-chamber-0.json --output experiments/results/early-loci-exact-audit.json
+```
+
+为保持精确审计的输入摘要可追溯，续跑结果使用新文件名，保留本轮已有报告。
+本轮按上述预算停止，没有候选需要进入完整八笔精确重放或覆盖证明。
+26 项研究回归测试通过，包含 7 项新过滤、适用域与前缀控制。
+已完成的三圆同时定心筛查保留复用，后续优先依据新的结构线索决定是否续跑。

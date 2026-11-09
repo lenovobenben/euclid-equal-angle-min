@@ -8,4 +8,9 @@
 
 [test_refined_replay.py](test_refined_replay.py) 再增加 5 项，核验直接两圆、两种七笔分支、原目标映射、九笔回退及黄金比实代数数参数。`pwsh -NoProfile -File experiments/verify-refined.ps1` 运行全部 19 项测试。
 
+[test_eight_search.py](test_eight_search.py) 增加 7 项，核验同时定心见证、轴外圆心、
+标量过滤、五笔替代前缀及其适用条件，并重验 11 项参数恒等式。
+用项目 SageMath 镜像执行 `sage -python -m unittest discover -s tests -v`，当前共 26 项通过。
+这些搜索控制与第一载体核验不提供完整八笔构造或新的全局下界。
+
 保留这些已知合法程序和命中作为后续搜索的阳性校准。一般参数正确性与覆盖另由 [BASELINE](../docs/BASELINE.md) 和 [NINE](../docs/NINE.md) 证明，有限测试不承担全域证明责任。
