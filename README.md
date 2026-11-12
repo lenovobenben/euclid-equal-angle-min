@@ -2,16 +2,14 @@
 
 **简体中文** · [English](README.en.md)
 
-**至多 9 E 构造全部两个镜像解；一般分支使用 4 条直线和 5 个圆。**
-
-给定直线上依次排列的 A、B、C、D，作直线外点 P，使
+**给定直线上依次排列的 A、B、C、D，用无刻度直尺和圆规，构造直线外点 P，使它看 AB、BC、CD 的视角相等。**
 
 $$
 \angle APB=\angle BPC=\angle CPD.
 $$
 
 本项目研究存在性与最少尺规步数，提供逐笔构造、一般参数与覆盖证明、精确重放和有界搜索。
-**当前通用上界为 9 E，已证明一般下界为 6 E；尚未证明九笔最短。**
+**至多 9 E 构造全部两个镜像解，一般分支使用 4 条直线和 5 个圆。已证明一般下界为 6 E，九笔最短性仍待证明。**
 
 [观看九笔双解动画](https://raw.githubusercontent.com/lenovobenben/euclid-equal-angle-min/main/animations/e9/media/E9EqualAngle_4k60.mp4) · [九笔构造与证明](docs/NINE.md) · [存在性](docs/EXISTENCE.md) ·
 [精确重放](experiments/results/nine-replay.json) · [一般下界](docs/LOWER_BOUND.md)

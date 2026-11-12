@@ -2,9 +2,7 @@
 
 [简体中文](README.md) · **English**
 
-**Construct both mirror solutions in at most 9 E; the main branch uses 4 lines and 5 circles.**
-
-Given A, B, C, D in order on a line, construct an off-line point P satisfying
+**Given four collinear points A, B, C and D in order, use an unmarked straightedge and compass to construct an off-line point P from which AB, BC and CD subtend equal angles.**
 
 $$
 \angle APB=\angle BPC=\angle CPD.
@@ -12,7 +10,8 @@ $$
 
 This project studies existence and minimum construction cost, with elementary traces,
 general-parameter and coverage proofs, exact replays, and bounded searches.
-**The full-domain upper bound is 9 E and the proved generic lower bound is 6 E.
+**Construct both mirror solutions in at most 9 E. The main branch uses 4 lines and 5 circles.
+The proved generic lower bound is 6 E.
 Nine-move minimality remains open.**
 
 [Watch the nine-move animation](https://raw.githubusercontent.com/lenovobenben/euclid-equal-angle-min/main/animations/e9/media/E9EqualAngle_4k60.mp4) · [Nine-move construction](docs/NINE.md) · [Existence](docs/EXISTENCE.md) ·
