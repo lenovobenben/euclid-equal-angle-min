@@ -155,11 +155,9 @@ PowerShell 不是所有平台的前置依赖；固定镜像与旧 latest 命令�
 | 回归检查 | [tests](tests/README.md) |
 | 系列约定与四项目对照 | [SERIES](docs/SERIES.md) |
 
-**尺规作图优化系列**：
-[Euclid-Min](https://github.com/lenovobenben/euclid-min) ·
-[Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min) ·
-[Euclid-Equal-Angle-Min](https://github.com/lenovobenben/euclid-equal-angle-min) ·
-[Euclid-Castillon-Min](https://github.com/lenovobenben/euclid-castillon-min)。
+**Euclid 几何研究系列**
+
+[Euclid-Min](https://github.com/lenovobenben/euclid-min) · [Euclid-CCC-Min](https://github.com/lenovobenben/euclid-ccc-min) · **Euclid-Equal-Angle-Min** · [Euclid-Castillon-Min](https://github.com/lenovobenben/euclid-castillon-min) · [Euclid-Conic-Classification](https://github.com/lenovobenben/euclid-conic-classification) · [Euclid-Cubic-Trisection](https://github.com/lenovobenben/euclid-cubic-trisection) · [Euclid-Square-Reconstruction](https://github.com/lenovobenben/euclid-square-reconstruction) · [Euclid-Fermat-Point](https://github.com/lenovobenben/euclid-fermat-point) · [Euclid-Quadrilateral-Centroid](https://github.com/lenovobenben/euclid-quadrilateral-centroid) · [Euclid-Quadrature](https://github.com/lenovobenben/euclid-quadrature)
 
 
 ## 许可与引用
